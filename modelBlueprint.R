@@ -1,6 +1,4 @@
 library(magrittr)
-library(tfdatasets)
-library(keras)
 
 # Flags de los hiperparametros #
 FLAGS <- keras::flags(
@@ -12,7 +10,8 @@ FLAGS <- keras::flags(
 )
 
 # Arquitectura de la red
-input <- tfdatasets::layer_input_from_dataset(datapriceTrain %>% dplyr::select(-close))
+input <- tfdatasets::layer_input_from_dataset(datapriceTrainNeuralNetwork %>% 
+                                                dplyr::select(-close))
 output <- input %>% 
   keras::layer_dense_features(
     tfdatasets::dense_features(spec)
@@ -43,28 +42,28 @@ model %>%
 # Entrenamiento del modelo.
 modelFit <- model %>%
   keras::fit(
-    x = dplyr::select(datapriceTrain, -close),
-    y = datapriceTrain[["close"]],
-    epochs = 1,
+    x = dplyr::select(datapriceTrainNeuralNetwork, -close),
+    y = datapriceTrainNeuralNetwork[["close"]],
+    epochs = 3000,
     validation_split = 0.2,
     callbacks = base::list(
       keras::callback_early_stopping(
         monitor = "val_loss",
-        patience = 30
+        patience = 3000
       )
     ),
     verbose = 2
   )
 
 # Prediccion
-base::c(loss, mae) %<-% (keras::evaluate(model, 
-                        dplyr::select(datapriceTest, -close), 
-                        datapriceTest[["close"]], verbose = 2))
+c(loss, mae) %<-% (keras::evaluate(model, 
+                        dplyr::select(datapriceTestNeuralNetwork, -close), 
+                        datapriceTestNeuralNetwork[["close"]], verbose = 2))
 base::sprintf("%.2f", mae * 1000)
 test_predict <- base::as.numeric(stats::predict(model, 
-                                                dplyr::select(datapriceTest, 
+                                                dplyr::select(datapriceTestNeuralNetwork, 
                                                               -close)))
 
-RMSE <- base::sqrt(base::mean((test_predict - datapriceTest[["close"]])^2))
+RMSE <- base::sqrt(base::mean((test_predict - datapriceTestNeuralNetwork[["close"]])^2))
 RMSE
 

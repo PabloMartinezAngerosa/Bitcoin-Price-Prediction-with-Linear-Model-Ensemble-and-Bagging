@@ -23,3 +23,38 @@ databaseCoins <- base::data.frame(
   "volLag5"    = .btcPrice$volume[6:(.limite +4)],
   "volLag6"    = .btcPrice$volume[7:(.limite +5)]
 )
+
+databaseFrameCombEstimators <-  utils::read.csv("frameCombEstimators.csv")
+dummyIndex <- data.frame("index" = base::c(1:base::nrow(databaseFrameCombEstimators)))
+databaseFrameCombEstimators <- cbind(dummyIndex, databaseFrameCombEstimators)
+
+# Invertimos el orden para que el primero sea la fecha mas reciente
+databaseFrameCombEstimators <- databaseFrameCombEstimators %>% 
+  dplyr::arrange(dplyr::desc(index))
+
+databaseFrameCombEstimators <- databaseFrameCombEstimators[,-1]
+databaseFrameCombEstimators <- base::cbind(dummyIndex, databaseFrameCombEstimators)
+
+dummyIndex    <- data.frame("index" = base::c(1:base::nrow(databaseCoins)))
+databaseCoins <- base::cbind(dummyIndex, databaseCoins)
+
+databaseCoins <- databaseCoins[databaseFrameCombEstimators$index,]
+
+# Seleccionamos aleatoriamente 70% para train y 30% para test. #
+# cortamos la base para que tenga las mismas predicciones que la
+# base con las ventanas moviles.
+base::set.seed(1234)
+datapriceTest  <- dplyr::slice_sample(databaseCoins, prop = 0.3)
+datapriceTrain <- dplyr::anti_join(databaseCoins, datapriceTest)
+
+databaseFrameCombEstimatorsTest  <- databaseFrameCombEstimators[datapriceTest$index,]
+databaseFrameCombEstimatorsTrain <- databaseFrameCombEstimators[datapriceTrain$index,]
+
+# Certificamos que los indices son todos los mismos para ambas bases de train y test
+base::sum(datapriceTest$index == databaseFrameCombEstimatorsTest$index)
+base::length(datapriceTest)
+base::length(databaseFrameCombEstimatorsTest)
+
+base::sum(datapriceTrain$index == databaseFrameCombEstimatorsTrain$index)
+base::length(datapriceTrain)
+base::length(databaseFrameCombEstimatorsTrain)

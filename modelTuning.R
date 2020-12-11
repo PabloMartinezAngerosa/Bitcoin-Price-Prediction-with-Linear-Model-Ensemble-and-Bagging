@@ -1,14 +1,12 @@
-library(magrittr)
+base::library(magrittr)
+base::source("DatabaseManager.R")
 
-databaseCoinsNeuralNetwork <-  utils::read.csv("frameCombEstimators.csv")
+datapriceTestNeuralNetwork  <- databaseFrameCombEstimatorsTest
+datapriceTrainNeuralNetwork <- databaseFrameCombEstimatorsTrain
 
-base::set.seed(1234)
-datapriceTest  <- dplyr::slice_sample(databaseCoinsNeuralNetwork, prop = 0.3)
-datapriceTrain <- dplyr::anti_join(databaseCoinsNeuralNetwork, datapriceTest)
-
-# Estandarizamos todas las variables para que tengan media 0 y desvio 1.#
+# Estandarizamos todas las variables para que tengan media 0 y desvio 1.
 spec <- tfdatasets::feature_spec(
-  datapriceTrain,
+  datapriceTrainNeuralNetwork,
   close ~ . 
 ) %>% 
   tfdatasets::step_numeric_column(
@@ -21,7 +19,7 @@ layer <- keras::layer_dense_features(
   feature_columns = tfdatasets::dense_features(spec), 
   dtype = tfdatasets::tf[["float32"]]
 )
-layer(datapriceTrain)
+layer(datapriceTrainNeuralNetwork)
 
 # Ejecutar Modelo.
 model_runs <- tfruns::tuning_run(

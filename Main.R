@@ -2,12 +2,6 @@ base::library(magrittr)
 base::source("DatabaseManager.R")
 base::source("LinearModelGeneralFit.R")
 
-# Seleccionamos aleatoriamente 70% para train y 30% para test. #
-# cortamos la base para que tenga las mismas predicciones que la
-# base con las ventanas moviles.
-base::set.seed(1234)
-datapriceTest  <- dplyr::slice_sample(databaseCoins, prop = 0.3)
-datapriceTrain <- dplyr::anti_join(databaseCoins, datapriceTest)
 
 # Se genera para la base con 70% train y 30% test
 # Ajustes con Modelos Lineales.
