@@ -53,18 +53,21 @@ RMSEMeanComboEstimadores
 # Utilizamos Bagging para media experta de opinones como estimador
 # Se recomienda un 60% de las observaciones por bolsa
 nInBag = (ncol(databaseFrameCombEstimatorsTest)  - 1 )  * 0.6
-# Generamos 1000 bolsas
-nBag <- 1000
+
+# Generamos 100 bolsas
+nBag <- 100
 acumRMSEBagging <- 0
+base::set.seed(1234)
 
 for (i in base::c(1:base::nrow(databaseFrameCombEstimatorsTest))) {
   close <- databaseFrameCombEstimatorsTest[i,ncol(databaseFrameCombEstimatorsTest)]
-  data  <- databaseFrameCombEstimatorsTest[i, 1:(ncol(databaseFrameCombEstimatorsTest)-1)]   
+  dummyData <- ncol(databaseFrameCombEstimatorsTest)-1
+  data  <- as.vector(t(databaseFrameCombEstimatorsTest[i, 1:dummyData]))
   baggingPrediction <- DoBagging(data, nBag, nInBag)
   acumRMSEBagging   <- acumRMSEBagging  + ( baggingPrediction - close )^2
   print(i)
 }
-RMSEBaggingComboEstimadores <- base::sqrt(
+ RMSEBaggingComboEstimadores <- base::sqrt(
   acumRMSEBagging / base::nrow(databaseFrameCombEstimatorsTest) 
 )
 RMSEBaggingComboEstimadores

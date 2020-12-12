@@ -5,16 +5,15 @@
 DoBagging <- function (data, nBag, nInBag) {
   
   trainedBag <- c()
-  
   for ( i in 1:nBag) {
     # Obtenemos con remplazo la primer bolsa
     # La distribucion de probabildad es una Uniforme 0,1
     sample <- base::sample(data, replace=TRUE, size=nInBag)
     #  Ejecutamos el Promedio por opinion experta en la bolsa
-    trainedBag[i] <- mean(sample)
+    trainedBag[i] <- mean(as.vector(sample))
   }
   # Hacemos la media de las distintas estimaciones y retorna prediccion baggin
-  mean = mean(trainedBag)
-  return(mean)
+  meanBag <- mean(trainedBag)
+  return(meanBag)
   
 }
