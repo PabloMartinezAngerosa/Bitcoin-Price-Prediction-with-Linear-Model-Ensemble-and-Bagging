@@ -58,3 +58,12 @@ base::length(databaseFrameCombEstimatorsTest)
 base::sum(datapriceTrain$index == databaseFrameCombEstimatorsTrain$index)
 base::length(datapriceTrain)
 base::length(databaseFrameCombEstimatorsTrain)
+
+# Sacamos la variable Index de las Basees de Datos generadas
+databaseFrameCombEstimators <- databaseFrameCombEstimators[,-1]
+databaseFrameCombEstimatorsTest  <- databaseFrameCombEstimators[,-1]
+databaseFrameCombEstimatorsTrain <- databaseFrameCombEstimators[,-1]
+
+databaseCoins  <- databaseCoins[,-1]
+datapriceTest  <- datapriceTest[,-1]
+datapriceTrain <- datapriceTrain[,-1]
