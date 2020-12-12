@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.7)  12 DEC 2020 19:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.7)  12 DEC 2020 19:45
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -269,8 +269,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
+) (paper.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+
+
+LaTeX Warning: Label `bitcoin_socialmedia' multiply defined.
+
 )
-No file paper.aux.
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -359,22 +365,12 @@ Dictionary: translator-basic-dictionary, Language: English
 breviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-
-LaTeX Warning: Citation `Satoshi' on page 1 undefined on input line 34.
-
-
-LaTeX Warning: Citation `Blockchain' on page 1 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Bitcoin_revolucion_monetaria' on page 1 undefined on i
-nput line 36.
+Underfull \hbox (badness 1048) in paragraph at lines 34--35
+\OT1/cmr/m/n/12 tec-no-loga re-vo-lu-cio-na-ria [[]], que cam-
+ []
 
 
 Underfull \vbox (badness 1264) has occurred while \output is active []
-
-
-
-LaTeX Warning: Citation `Satoshi' on page 1 undefined on input line 38.
 
 
 Underfull \vbox (badness 1102) has occurred while \output is active []
@@ -383,24 +379,12 @@ Underfull \vbox (badness 1102) has occurred while \output is active []
 
 
 ]
-
-LaTeX Warning: Citation `mainDriversBitcoin' on page 2 undefined on input line 
-44.
-
-
-LaTeX Warning: Reference `priceClose' on page 2 undefined on input line 61.
-
 <priceCloseBitcoin.png, id=8, 1128.01425pt x 387.849pt>
 File: priceCloseBitcoin.png Graphic file (type png)
 <use priceCloseBitcoin.png>
 Package pdftex.def Info: priceCloseBitcoin.png  used on input line 65.
 (pdftex.def)             Requested size: 452.0pt x 155.40907pt.
-[2]
-
-LaTeX Warning: Citation `forecastinBitcoinClosing' on page 3 undefined on input
- line 80.
-
-
+ [2]
 Underfull \hbox (badness 1221) in paragraph at lines 88--89
 \OT1/cmr/m/n/12 do el con-jun-to de va-lo-res po-si-bles de
  []
@@ -412,24 +396,10 @@ T1/cmr/m/n/12 re-gio-nes dis-jun-tas
  []
 
 [3 <./priceCloseBitcoin.png>]
-
-LaTeX Warning: Citation `libroCurso' on page 4 undefined on input line 96.
-
-
-LaTeX Warning: Citation `libroCurso' on page 4 undefined on input line 100.
-
-
-LaTeX Warning: Reference `ecuacionRedes' on page 4 undefined on input line 110.
-
-
-
 Overfull \hbox (16.3652pt too wide) detected at line 115
 \OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 f []
  []
-
-
-LaTeX Warning: Reference `redNeuronal' on page 4 undefined on input line 117.
 
 [4]
 <redNeuronal.png, id=28, 392.96812pt x 153.57375pt>
@@ -448,16 +418,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--123
  []
 
 
-LaTeX Warning: Reference `remseequation' on page 5 undefined on input line 134.
-
-
-
-LaTeX Warning: Citation `randomForest' on page 5 undefined on input line 144.
-
-
-LaTeX Warning: Citation `r' on page 5 undefined on input line 144.
-
-
 Underfull \hbox (badness 6236) in paragraph at lines 144--145
 \OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 1$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n
 /12 2$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 3$, $\OML/cmm/m/it/12 volLag\OT
@@ -470,13 +430,6 @@ Underfull \hbox (badness 4193) in paragraph at lines 144--145
  []
 
 [5 <./redNeuronal.png>]
-
-LaTeX Warning: Reference `decisionTree' on page 6 undefined on input line 146.
-
-
-LaTeX Warning: Citation `forecastinBitcoinClosing' on page 6 undefined on input
- line 149.
-
 <decisionsTree.jpg, id=33, 560.0925pt x 422.57875pt>
 File: decisionsTree.jpg Graphic file (type jpg)
 <use decisionsTree.jpg>
@@ -486,13 +439,6 @@ Package pdftex.def Info: decisionsTree.jpg  used on input line 153.
 Overfull \hbox (11.38115pt too wide) in paragraph at lines 153--154
  [][] 
  []
-
-
-LaTeX Warning: Reference `baggingTop10' on page 6 undefined on input line 158.
-
-
-LaTeX Warning: Reference `baggingVariableImportancia' on page 6 undefined on in
-put line 158.
 
 
 Underfull \hbox (badness 4316) in paragraph at lines 158--159
@@ -514,32 +460,12 @@ Package pdftex.def Info: baggingVariableImportancia.png  used on input line 163
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-LaTeX Warning: Citation `keras' on page 7 undefined on input line 193.
-
-
-LaTeX Warning: Citation `r' on page 7 undefined on input line 193.
-
-
-LaTeX Warning: Citation `tensorflow' on page 7 undefined on input line 193.
-
-
-LaTeX Warning: Reference `redesModelTuning' on page 7 undefined on input line 1
-93.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./baggingVariableImportancia.png>]
 Overfull \hbox (41.35945pt too wide) in paragraph at lines 209--210
  [][][][][][][] 
  []
-
-
-LaTeX Warning: Reference `RMSEFinal' on page 8 undefined on input line 212.
-
-
-LaTeX Warning: Citation `paper1' on page 8 undefined on input line 212.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -574,23 +500,20 @@ Underfull \hbox (badness 6445) in paragraph at lines 371--374
  R In-ter-fa-ce to 'Ten-sor-Flow'.
  []
 
-[11] (paper.aux
+[11] [12] (paper.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6661 strings out of 480930
- 135108 string characters out of 2899762
- 382921 words of memory out of 3000000
+ 6663 strings out of 480930
+ 135207 string characters out of 2899762
+ 383158 words of memory out of 3000000
  22457 multiletter control sequences out of 15000+200000
- 542809 words of font info for 63 fonts, out of 3000000 for 9000
+ 542502 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,16n,46p,1323b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/pablo/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
@@ -607,9 +530,9 @@ pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pablo/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pablo/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on paper.pdf (11 pages, 318915 bytes).
+Output written on paper.pdf (12 pages, 318915 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
