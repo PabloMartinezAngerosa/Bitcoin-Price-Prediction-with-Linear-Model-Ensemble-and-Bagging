@@ -52,17 +52,17 @@ databaseFrameCombEstimatorsTrain <- databaseFrameCombEstimators[datapriceTrain$i
 
 # Certificamos que los indices son todos los mismos para ambas bases de train y test
 base::sum(datapriceTest$index == databaseFrameCombEstimatorsTest$index)
-base::length(datapriceTest)
-base::length(databaseFrameCombEstimatorsTest)
+base::dim(datapriceTest)
+base::dim(databaseFrameCombEstimatorsTest)
 
 base::sum(datapriceTrain$index == databaseFrameCombEstimatorsTrain$index)
-base::length(datapriceTrain)
-base::length(databaseFrameCombEstimatorsTrain)
+base::dim(datapriceTrain)
+base::dim(databaseFrameCombEstimatorsTrain)
 
 # Sacamos la variable Index de las Basees de Datos generadas
 databaseFrameCombEstimators <- databaseFrameCombEstimators[,-1]
-databaseFrameCombEstimatorsTest  <- databaseFrameCombEstimators[,-1]
-databaseFrameCombEstimatorsTrain <- databaseFrameCombEstimators[,-1]
+databaseFrameCombEstimatorsTest  <- databaseFrameCombEstimatorsTest[,-1]
+databaseFrameCombEstimatorsTrain <- databaseFrameCombEstimatorsTrain[,-1]
 
 databaseCoins  <- databaseCoins[,-1]
 datapriceTest  <- datapriceTest[,-1]
