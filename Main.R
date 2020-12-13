@@ -15,10 +15,13 @@ bestRMSELinearModel   <- linearModelGeneralFit$RMSE[base::which.min(linearModelG
 # Esta base fue generada con DatabaseFrameComboEstimatorsLinearModels.R
 totalEstimadoresEnBandas    <- 0
 cota <- 5
+colData <- base::ncol(databaseFrameCombEstimators)-1
+closeIndex <- base::ncol(databaseFrameCombEstimators)
+rowData <- base::nrow(databaseFrameCombEstimators)
 
-for (i in base::c(1:base::nrow(databaseFrameCombEstimators))) {
-  for (j in base::c(1:(base::ncol(databaseFrameCombEstimators)-1))) {
-    close <- databaseFrameCombEstimators[i,ncol(databaseFrameCombEstimators)]
+for (i in base::c(1:rowData)) {
+  close <- databaseFrameCombEstimators[i,closeIndex]
+  for (j in base::c(1:colData)) {
     closeEstimated <- databaseFrameCombEstimators[i, j]
     if (closeEstimated > (close - cota) && closeEstimated < (close + cota)) {
       totalEstimadoresEnBandas <- totalEstimadoresEnBandas + 1
@@ -27,21 +30,40 @@ for (i in base::c(1:base::nrow(databaseFrameCombEstimators))) {
   }
 }
 
+# Realizamos histogramas basado en la cantidad de aciertos para cada experto en una
+# cota +-5 . 
+aciertosExpertos = base::rep(0,colData)
+
+for (i in base::c(1:rowData)) {
+  close <-  databaseFrameCombEstimators[i,closeIndex]
+  for (j in base::c(1:colData)) {
+    closeEstimated <- databaseFrameCombEstimators[i, j]
+    if (closeEstimated > (close - cota) && closeEstimated < (close + cota)) {
+      aciertosExpertos[j] = aciertosExpertos[j] + 1
+    }
+  }
+}
+graphics::hist(aciertosExpertos)
+max(aciertosExpertos)  #1061
+min(aciertosExpertos)  #351
+
 # Porcentaje de estimadores por frame que entre 2^n predicciones al menos 1 se encuentra
 # entre las cotas
 # cota = 5 -> 76.15005%
-totalEstimadoresEnBandas/base::nrow(databaseFrameCombEstimators)
+totalEstimadoresEnBandas/rowData
 
 # Calcula RMSE de la media experta de opiniones como estimador
-acumMeanComboEstimadores<- 0
-for (i in base::c(1:base::nrow(databaseFrameCombEstimatorsTest))) {
-  close <- databaseFrameCombEstimatorsTest[i,ncol(databaseFrameCombEstimatorsTest)]
-  acumCloseEstimated  <- 0
-  for (j in base::c(1:(base::ncol(databaseFrameCombEstimatorsTest)-1))) {
-    closeEstimated <- databaseFrameCombEstimatorsTest[i, j]
-    acumCloseEstimated <- acumCloseEstimated + closeEstimated
-  }
-  meanEstimator <- acumCloseEstimated/(base::ncol(databaseFrameCombEstimatorsTest)-1)
+acumMeanComboEstimadores <- 0
+colData <- base::ncol(databaseFrameCombEstimatorsTest)-1
+closeIndex <- base::ncol(databaseFrameCombEstimatorsTest)
+rowData <- base::nrow(databaseFrameCombEstimatorsTest)
+
+for (i in base::c(1:rowData)) {
+  close <- databaseFrameCombEstimatorsTest[i,closeIndex]
+  # se obtienen todas las estimaciones de close como vector
+  data  <- as.vector(t(databaseFrameCombEstimatorsTest[i, 1:colData]))
+  # se hace la media
+  meanEstimator <- mean(data)
   acumMeanComboEstimadores <- acumMeanComboEstimadores + ( meanEstimator - close )^2
 }
 RMSEMeanComboEstimadores <- base::sqrt(
@@ -50,27 +72,7 @@ RMSEMeanComboEstimadores <- base::sqrt(
                             )
 RMSEMeanComboEstimadores
 
-# Utilizamos Bagging para media experta de opinones como estimador
-# Se recomienda un 60% de las observaciones por bolsa
-nInBag = (ncol(databaseFrameCombEstimatorsTest)  - 1 )  * 0.6
 
-# Generamos 100 bolsas
-nBag <- 100
-acumRMSEBagging <- 0
-base::set.seed(1234)
-
-for (i in base::c(1:base::nrow(databaseFrameCombEstimatorsTest))) {
-  close <- databaseFrameCombEstimatorsTest[i,ncol(databaseFrameCombEstimatorsTest)]
-  dummyData <- ncol(databaseFrameCombEstimatorsTest)-1
-  data  <- as.vector(t(databaseFrameCombEstimatorsTest[i, 1:dummyData]))
-  baggingPrediction <- DoBagging(data, nBag, nInBag)
-  acumRMSEBagging   <- acumRMSEBagging  + ( baggingPrediction - close )^2
-  print(i)
-}
- RMSEBaggingComboEstimadores <- base::sqrt(
-  acumRMSEBagging / base::nrow(databaseFrameCombEstimatorsTest) 
-)
-RMSEBaggingComboEstimadores
 
 
 

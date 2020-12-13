@@ -1,3 +1,4 @@
+base::library(magrittr)
 # Bitcoin precio por hora  desde 2019-12-10 23:00:00 hasta 2020-12-10 01:00:00 #
 .btcPrice <-  utils::read.csv("BTCUSDT-1h.csv")
 
@@ -67,3 +68,4 @@ databaseFrameCombEstimatorsTrain <- databaseFrameCombEstimatorsTrain[,-1]
 databaseCoins  <- databaseCoins[,-1]
 datapriceTest  <- datapriceTest[,-1]
 datapriceTrain <- datapriceTrain[,-1]
+
