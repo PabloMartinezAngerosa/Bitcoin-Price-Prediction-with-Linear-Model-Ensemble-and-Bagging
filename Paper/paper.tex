@@ -150,7 +150,7 @@ Esto es un punto interesante, ya que como se menciona en~\cite{forecastinBitcoin
 
 \begin{figure}[!hbt]
 \centering
-\includegraphics[width=0.5\textwidth]{decisionsTree}
+\includegraphics[width=0.5\textwidth]{diagramNeuralNetwork}
 \caption{Árbol de regresión correspondiente al precio de Cierre del Bitcoin.}
 \label{decisionTree}
 \end{figure}
@@ -191,6 +191,7 @@ Otro indicador de error de prueba es el error out-of-bag (OOB). Los árboles que
 \end{table*}
 
 Para las Redes Neuronales se utilizó el paquete Keras~\cite{keras} de R~\cite{r} que es una capa de alto nivel de Tensorflow~\cite{tensorflow}. Tensorflow es una biblioteca de código abierto propiedad de Google y de las más utilizadas actualmente para el aprendizaje profundo. En el Cuadro~\ref{redesModelTuning} se muestran los RSME obtenidos por distintas configuraciones de capas y funciones de activación. En particular para todas las redes se utilizaron las mismas variables de entrada  las cuales son las obtenidas por el modelo con menor RMSE de Bagging ($trend$, $closeLag1$ , $closeLag2$ , $closeLag3$ ,  $volLag3$ , $volLag5$ y $ltcOpen$). Todas las redes constaban de 3 capas ocultas, donde la primera capa oculta es utilizada para la estandarización de los valores de las variables de entrada. La segunda capa oculta se probó con 8 y 16 nodos y funciones de activación linear y relu. La  tercer capa se probó con 8 nodos y funciones relu. La tendencia de los nodos y capas probados mostraron que al agregar más nodos en las capas se obtenían mejores resultados. Estos algoritmos emplean una gran cantidad de procesos informáticos, por lo que probar con más nodos y capas, exigía un poder computacional fuera del alcance técnico empleado para esta investigación. 
+
 
 \begin{table*}[!hbt]
 \centering
