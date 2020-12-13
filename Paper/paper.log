@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.7)  12 DEC 2020 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.7)  12 DEC 2020 23:59
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -365,15 +365,10 @@ Dictionary: translator-basic-dictionary, Language: English
 breviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-Underfull \hbox (badness 1048) in paragraph at lines 34--35
-\OT1/cmr/m/n/12 tec-no-loga re-vo-lu-cio-na-ria [[]], que cam-
- []
-
-
 Underfull \vbox (badness 1264) has occurred while \output is active []
 
 
-Underfull \vbox (badness 1102) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{C:/Users/pablo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
@@ -382,50 +377,53 @@ Underfull \vbox (badness 1102) has occurred while \output is active []
 <priceCloseBitcoin.png, id=8, 1128.01425pt x 387.849pt>
 File: priceCloseBitcoin.png Graphic file (type png)
 <use priceCloseBitcoin.png>
-Package pdftex.def Info: priceCloseBitcoin.png  used on input line 65.
+Package pdftex.def Info: priceCloseBitcoin.png  used on input line 62.
 (pdftex.def)             Requested size: 452.0pt x 155.40907pt.
- [2]
-Underfull \hbox (badness 1221) in paragraph at lines 88--89
+ [2] [3 <./priceCloseBitcoin.png>]
+Underfull \hbox (badness 1221) in paragraph at lines 85--86
 \OT1/cmr/m/n/12 do el con-jun-to de va-lo-res po-si-bles de
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 88--89
+Underfull \hbox (badness 2680) in paragraph at lines 85--86
 \OML/cmm/m/it/12 X[]; X[]; :::; X[]$ \OT1/cmr/m/n/12 en $\OML/cmm/m/it/12 J$ \O
 T1/cmr/m/n/12 re-gio-nes dis-jun-tas
  []
 
-[3 <./priceCloseBitcoin.png>]
-Overfull \hbox (16.3652pt too wide) detected at line 115
+
+Overfull \hbox (16.3652pt too wide) detected at line 112
 \OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 f []
  []
 
-[4]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
 <redNeuronal.png, id=28, 392.96812pt x 153.57375pt>
 File: redNeuronal.png Graphic file (type png)
 <use redNeuronal.png>
-Package pdftex.def Info: redNeuronal.png  used on input line 121.
+Package pdftex.def Info: redNeuronal.png  used on input line 118.
 (pdftex.def)             Requested size: 226.0pt x 88.32295pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 121--123
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 118--120
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--123
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
 \OT1/cmr/m/n/12 (https://poncos.wordpress.com/2008/03/
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 144--145
+Underfull \hbox (badness 6236) in paragraph at lines 141--142
 \OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 1$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n
 /12 2$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 3$, $\OML/cmm/m/it/12 volLag\OT
 1/cmr/m/n/12 4$,
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 144--145
+Underfull \hbox (badness 4193) in paragraph at lines 141--142
 \OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 5$ (cin-co pri-me-ros re-tra-sos del
  []
 
@@ -433,61 +431,55 @@ Underfull \hbox (badness 4193) in paragraph at lines 144--145
 <diagramNeuralNetwork.png, id=33, 704.6325pt x 527.9725pt>
 File: diagramNeuralNetwork.png Graphic file (type png)
 <use diagramNeuralNetwork.png>
-Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 153.
+Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 150.
 (pdftex.def)             Requested size: 226.0pt x 169.33328pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 153--154
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 150--151
  [][] 
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 158--159
+Underfull \hbox (badness 4316) in paragraph at lines 155--156
 []\OT1/cmr/m/n/12 En el ca-so de Bag-ging el mo-de-
  []
 
 
-Underfull \hbox (badness 6741) in paragraph at lines 158--159
+Underfull \hbox (badness 6741) in paragraph at lines 155--156
 \OT1/cmr/m/n/12 lo que lo-gra un me-nor RM-SE de
  []
 
-<baggingVariableImportancia.png, id=34, 686.565pt x 592.46344pt>
+[6 <./diagramNeuralNetwork.png>]
+<baggingVariableImportancia.png, id=38, 686.565pt x 592.46344pt>
 File: baggingVariableImportancia.png Graphic file (type png)
 <use baggingVariableImportancia.png>
-Package pdftex.def Info: baggingVariableImportancia.png  used on input line 163
+Package pdftex.def Info: baggingVariableImportancia.png  used on input line 160
 .
 (pdftex.def)             Requested size: 316.39862pt x 273.02466pt.
-[6 <./diagramNeuralNetwork.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./baggingVariableImportancia.png>]
-Overfull \hbox (41.35945pt too wide) in paragraph at lines 210--211
+Overfull \hbox (41.35945pt too wide) in paragraph at lines 207--208
  [][][][][][][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [7]
+[8 <./baggingVariableImportancia.png>] [9
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-[9]
-Underfull \hbox (badness 1721) in paragraph at lines 283--288
+]
+Underfull \hbox (badness 1721) in paragraph at lines 280--285
 []\OT1/cmr/m/n/12 Wheatley, S., Sor-net-te, D., Hu-ber, T., Rep-pen, M., Gant-n
 er, RN. (2019).
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 296--301
+Underfull \hbox (badness 1253) in paragraph at lines 293--298
 \OT1/cmr/m/n/12 Afri-can Uni-ver-sity, Ins-ti-tu-te for Ba-sic Scien-ces, Tech-
 no-logy, and In-no-va-tion.
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 308--312
+Underfull \hbox (badness 4279) in paragraph at lines 305--309
 []\OT1/cmr/m/n/12 Kristoufek, L. (2015). \OT1/cmr/m/it/12 What Are the Main Dri
 -vers of the Bit-coin Pri-
  []
@@ -495,7 +487,7 @@ Underfull \hbox (badness 4279) in paragraph at lines 308--312
 [10
 
 ]
-Underfull \hbox (badness 6445) in paragraph at lines 372--375
+Underfull \hbox (badness 6445) in paragraph at lines 369--372
 []\OT1/cmr/m/n/12 Allaire, JJ., Tang, Y. (2020). \OT1/cmr/m/it/12 ten-sor-flow:
  R In-ter-fa-ce to 'Ten-sor-Flow'.
  []
@@ -511,7 +503,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  6661 strings out of 480930
  135235 string characters out of 2899762
- 383158 words of memory out of 3000000
+ 388158 words of memory out of 3000000
  22456 multiletter control sequences out of 15000+200000
  542502 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -530,7 +522,7 @@ pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/pablo/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pablo/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pablo/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on paper.pdf (12 pages, 323052 bytes).
+Output written on paper.pdf (12 pages, 322863 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
