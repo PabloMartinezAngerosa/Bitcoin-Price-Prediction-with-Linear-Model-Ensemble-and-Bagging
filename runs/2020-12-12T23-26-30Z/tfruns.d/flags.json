@@ -1,0 +1,6 @@
+{
+  "nodes_layer_2": 8,
+  "nodes_layer_3": 8,
+  "activation_layer_2": "relu",
+  "activation_layer_3": "relu"
+}

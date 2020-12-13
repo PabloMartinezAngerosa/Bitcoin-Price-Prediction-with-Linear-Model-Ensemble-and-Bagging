@@ -44,26 +44,27 @@ modelFit <- model %>%
   keras::fit(
     x = dplyr::select(datapriceTrainNeuralNetwork, -close),
     y = datapriceTrainNeuralNetwork[["close"]],
-    epochs = 3000,
+    epochs = 1000,
     validation_split = 0.2,
     callbacks = base::list(
       keras::callback_early_stopping(
         monitor = "val_loss",
-        patience = 3000
+        patience = 500
       )
     ),
     verbose = 2
   )
 
 # Prediccion
-c(loss, mae) %<-% (keras::evaluate(model, 
-                        dplyr::select(datapriceTestNeuralNetwork, -close), 
-                        datapriceTestNeuralNetwork[["close"]], verbose = 2))
-base::sprintf("%.2f", mae * 1000)
 test_predict <- base::as.numeric(stats::predict(model, 
                                                 dplyr::select(datapriceTestNeuralNetwork, 
                                                               -close)))
 
 RMSE <- base::sqrt(base::mean((test_predict - datapriceTestNeuralNetwork[["close"]])^2))
 RMSE
+
+c(loss, mae) %<-% (keras::evaluate(model, 
+                        dplyr::select(datapriceTestNeuralNetwork, -close), 
+                        datapriceTestNeuralNetwork[["close"]], verbose = 2))
+base::sprintf("%.2f", mae * 1000)
 
