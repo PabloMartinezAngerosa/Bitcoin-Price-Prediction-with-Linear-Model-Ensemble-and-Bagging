@@ -72,13 +72,34 @@ RMSEMeanComboEstimadores <- base::sqrt(
                             )
 RMSEMeanComboEstimadores
 
+base::set.seed(134)
+colData <- base::ncol(databaseFrameCombEstimators)-1
+closeIndex <- base::ncol(databaseFrameCombEstimators)
+muestra <- sample(1:base::nrow(databaseFrameCombEstimators), size = 4)
+muestra1 <- as.vector(t(databaseFrameCombEstimators[muestra[1], 1:colData]))
+close1 <- databaseFrameCombEstimators[muestra[1], closeIndex]
+plot(muestra1, seq(from = 1, to = 1, length.out = length(muestra1)), 
+     ylim=c(0.5,1.5), xlim = c(min(muestra1)-30,max(muestra1)+30),
+     xlab="", ylab = "")
+abline(v=close1, col=1)
 
+muestra2 <- as.vector(t(databaseFrameCombEstimators[muestra[2], 1:colData]))
+close2 <- databaseFrameCombEstimators[muestra[2], closeIndex]
+plot(muestra2, seq(from = 1, to = 1, length.out = length(muestra1)), 
+     ylim=c(0.5,1.5), xlim = c(min(muestra2)-30,max(muestra2)+30),
+     xlab="", ylab = "")
+abline(v=close2, col=1)
 
+muestra3 <- as.vector(t(databaseFrameCombEstimators[muestra[3], 1:colData]))
+close3 <- databaseFrameCombEstimators[muestra[3], closeIndex]
+plot(muestra3, seq(from = 1, to = 1, length.out = length(muestra1)), 
+     ylim=c(0.5,1.5), xlim = c(min(muestra3)-30,max(muestra3)+30),
+     xlab="", ylab = "")
+abline(v=close3, col=1)
 
-
-
-
-
-
-
-
+muestra4 <- as.vector(t(databaseFrameCombEstimators[muestra[4], 1:colData]))
+close4 <- databaseFrameCombEstimators[muestra[4], closeIndex]
+plot(muestra4, seq(from = 1, to = 1, length.out = length(muestra4)), 
+     ylim=c(0.5,1.5), xlim = c(min(muestra4)-30,max(muestra4)+30),
+     xlab="", ylab = "")
+abline(v=close4, col=1)

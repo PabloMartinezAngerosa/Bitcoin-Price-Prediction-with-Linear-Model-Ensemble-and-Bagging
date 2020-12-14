@@ -4,6 +4,7 @@
 \author{Vanessa Alcalde, Pablo Martinez Angerosa}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage[tight]{subfigure}
 \renewcommand{\figurename}{Figura}
 \newtheorem{dfn}{Definición}
 \renewcommand{\labelenumi}{P.\theenumi}
@@ -33,11 +34,11 @@ En 2008 Satoshi Nakamoto presentó una tecnología revolucionaria llamada Bitcoi
 \section{Introducción}
 Bitcoin, una criptomoneda digital, presentada en su inicio en foros especializados de criptografía para unos pocos eruditos \cite{Satoshi}, esta actualmente siendo integrada y aceptada por los principales actores del mundo de las finanzas. Considerándose esta situación, por muchos expertos en el tema, como la consolidación definitiva de esta moneda la cual se dirige hacia un futuro brillante. 
 
-En la actualidad existen diversas investigaciones, muchas de ellas realizadas por las Universidades mas prestigiosas, que analizan la composición del precio del Bitcoin y proponen técnicas de predicción del mismo \cite{mainDriversBitcoin}. Aunque hay matices de propuestas, el entendimiento del precio del Bitcoin como un paseo aleatorio, donde la historia del propio precio, no tiene incidencia en su predicción posterior, es de común acuerdo entre las investigaciones. Esto conlleva a enfrentar este problema de predicción desde otra perspectiva a la de Series de tiempo. Para esto se han investigado diversas metodologías dentro del enfoque de aprendizaje automático. En la gran mayoría de las investigaciones el algoritmo recomendado para la predicción del precio del Bitcoin es Modelos Lineales  \cite{regression_for_bitcoin_price}, basado principalmente en variables explicativas de retrasos del precio y el volumen del Bitcoin  \cite{forecastinBitcoinClosing}.  
+En la actualidad existen diversas investigaciones que analizan la composición del precio del Bitcoin y proponen técnicas de predicción del mismo \cite{mainDriversBitcoin}. Aunque hay matices de propuestas, el entendimiento del precio del Bitcoin como un paseo aleatorio, donde la historia del propio precio, no tiene incidencia en su predicción posterior, es de común acuerdo entre las investigaciones. Esto conlleva a enfrentar este problema de predicción desde otra perspectiva a la de Series de tiempo. Para esto se han investigado diversas metodologías dentro del enfoque de aprendizaje automático. En la gran mayoría de las investigaciones el algoritmo recomendado para la predicción del precio del Bitcoin es Modelos Lineales  \cite{regression_for_bitcoin_price}, basado principalmente en variables explicativas de retrasos del precio y el volumen del Bitcoin  \cite{forecastinBitcoinClosing}.  
 
 El objetivo de esta investigación es proponer alternativas a las investigaciones realizadas actualmente de la predicción del precio del Bitcoin que logren mejorar el desempeño de estas propuestas. 
 
-Para esto se utilizó un sistema de ventanas móviles el cual genera un ensamble de estimadores mediante modelos lineales, que son consideradas como opiniones expertas, y se proponen diversas técnicas para sintetizar estas opiniones en una sola predicción. El modelo propuesto logra mejorar el desempeño de las técnicas recomendadas en la literatura existente en al menos un 100\%. Es de destacar que los realizadores de esta investigación han logrado generar algoritmos automáticos de compra-venta de Bitcoin  basados en los estimadores propuestos que logran en un  intervalo de corto plazo duplicar la inversión.  
+Para esto se utilizó un sistema de ventanas móviles el cual genera un ensamble de estimadores mediante modelos lineales, que son consideradas como opiniones expertas, y se proponen diversas técnicas para sintetizar estas opiniones en una sola predicción. El modelo propuesto logra duplicar el desempeño de las técnicas recomendadas en la literatura existente. Es de destacar que los realizadores de esta investigación han logrado generar algoritmos automáticos de compra-venta de Bitcoin  basados en los estimadores propuestos que logran en un  intervalo de corto plazo doblar la inversión inicial.  
 
 
 En la segunda sección de esta investigación detallamos la obtención y tratamiento de los datos, en la tercera sección describimos los modelos utilizados, en la cuarta sección presentamos los resultados y finalmente en la quinta sección mostramos las conclusiones de esta investigación y posibles trabajos a futuro.
@@ -47,40 +48,48 @@ En la segunda sección de esta investigación detallamos la obtención y tratami
 \section{Datos}
 \subsection{Descripción de los datos}
 
-Para la construcción de la base de datos utilizamos los datos diarios del precio de $Apertura$, $Cierre$, $Volumen$ de transacciones, provistos por Cryptodatadownload\footnote{https://www.cryptodatadownload.com}  que mantiene actualizada las bases de precios diarios de las principales criptomenadas y las principales casas de cambio online. Para esta investigación se utilizaron los datos de la casa de cambio online Coinbase\footnote{https://www.coinbase.com} que es considerada una de las más seguras y estables por la comunidad, la cual permite la comercialización y respaldo de criptomonedas como Bitcoin, Ethereum y cuya sede se encuentra basada en USA. 
+Para la construcción de la base de datos utilizamos los datos diarios del precio de  $Cierre$ y $Volumen$ de transacciones de Bitcoin, provistos por Binance\footnote{https://www.binance.com} que es una casa de cambio digital la cual es considerada la plataforma de intercambio con el nivel de volumen comercial más grande del mundo. 
 
-Se utilizaron los registros diarios en dólares americanos (USD)  de las criptomonedas Bitcoin(BTC), Ethereum(ETH), Litecoin(LTC), Bitcoin Cash(BCH), Ethereum Classic(ETC), Chainlink(LINK) y  Augur (REP). 
+Binance provee a los desarrolladores de una API en distintos lenguajes de programación, desde la cual es posible acceder de forma gratuita a los registros en tiempo real de las fluctuaciones del precio del Bitcoin así como también a los registros históricos de esta criptomoneda. Para esta investigación se generó una cuenta de usuario en Binance y se utilizó el API provista para Python\footnote{https://python-binance.readthedocs.io} para descargar los registros históricos por hora en dólares americanos (USD) de Bitcoin(BTC). 
 
-También se utilizaron los datos diarios provistos en Google Trends\footnote{https://trends.google.com/trends} que reflejan el grado de interés diario de la búsqueda de la palabra clave Bitcoin en el buscador de Google, siendo este el principal motor de búsqueda en la actualidad. El índice que provee estos datos mide el interés relativo de una búsqueda en una región dada y un intervalo de tiempo determinado. Según las explicaciones de Google un valor de 100 significa un pico en la popularidad del término buscado, un valor de 50 significa que el término es medianamente popular. Un resultado de 0 significa que no hay búsquedas suficientes en ese término. 
 
 \subsection{Preparación de los datos}
 
-La base de datos contiene 232 días comenzando en el día $22/1/2020$  hasta el $9/9/2020$. En la Figura~\ref{priceClose} se muestran los datos del $Cierre$ del Bitcoin como serie temporal en este intervalo de tiempo. 
+La base de datos contiene 8717 registros comenzando en el día $12/12/2019$ a las 08:00:00h hasta el $10/12/2020$ a la 01:00:00h. En la Figura~\ref{priceClose} se muestran los datos del $Cierre$ del Bitcoin como serie temporal en este intervalo de tiempo. 
 
 \begin{figure*}[!hbt]
 \centering
-\includegraphics[width=1\textwidth]{priceCloseBitcoin}
-\caption{Serie de tiempo del precio del Cierre del Bitcoin desde el día $22/1/2020$  hasta el $9/9/2020$.}
+\includegraphics[width=1\textwidth]{serie}
+\caption{Serie de tiempo del precio del Cierre del Bitcoin desde el día $12/12/2019$ a las 08:00:00h hasta el $10/12/2020$ a la 01:00:00h.}
 \label{priceClose}
 \end{figure*}
 
-Todas las bases provistas por Cryptodatadownload se encuentran en formato de archivo .CSV y no requirieron mayor preparación ya que no existían datos faltantes y el formato es ampliamente utilizado. 
-
-Para armar la variable de Google Trends fue necesaria la implementación recursiva de la descarga de la base de datos en distintas ventanas de tiempo para una unión posterior de los datos. Esto es debido a que la información diaria provista por Google tiene un marco de ventana de dos meses. 
 
 La base se estructuró de modo de tener un conjunto de entradas $X$ y salidas $Y$ con una dependencia temporal. La variable de predicción $Y$ corresponde al $Cierre$ del precio del Bitcoin en el tiempo $n$. Las entradas correspondientes a $X$ se encuentran en diversos momentos del pasado. 
 
-Todos los precios de $Apertura$ se encuentran en el mismo tiempo $n$ que se quiere predecir, ya que para realizar la predicción es información que existe en ese momento. 
+La variable $Volumen$ corresponde al tiempo $n-1$ ya que es información que no existe a la hora de predecir el momento $n$.
 
-Todas las variables $Volumen$ correspondientes a las distintas monedas corresponden al tiempo $n-1$ ya que es información que no existe a la hora de predecir el momento $n$.
+Se crearon variables  de retraso llamadas $lag$, para el precio de $Cierre$ y $Volumen$ de Bitcoin. Los números utilizados para nombrar las variables de retraso, representan el tiempo del pasado. Por ejemplo la variable $closeLag3$ representa el precio del $Cierre$ del Bitcoin 3 horas previas al momento $n$~\cite{forecastinBitcoinClosing}.  
 
-También se crearon variables  de retraso llamadas $lag$, para el precio de $Cierre$ y $Volumen$ de Bitcoin. Los números utilizados para nombrar las variables de retraso, representan el tiempo del pasado. Por ejemplo la variable $closeLag3$ representa el precio del $Cierre$ del Bitcoin 3 días previos al momento $n$~\cite{forecastinBitcoinClosing}.  
+Dada la experiencia previa obtenida a partir de investigaciones y la literatura existente las variables utilizadas son los cinco primeros retrasos del precio del $Close$ y del $Volumen$ del Bitcoin. En la base de datos estas variables son definidas como $closeLag1$, $closeLag2$, $closeLag3$, $closeLag4$, $closeLag5$ $volLag1$, $volLag2$, $volLag3$, $volLag4$ y $volLag5$ respectivamente.
 
 \section{Los modelos}
 
-Las tres técnicas utilizadas en esta investigación incluyen Árboles de decisión, Bagging y Redes Neuronales. Todas se utilizan exclusivamente desde una perspectiva de predicción del precio de $Cierre$ del Bitcoin. 
 
-Un árbol de decisión es una división recursiva del espacio de variables explicativas en una estructura en forma de árbol, cada nodo interior contiene una pregunta sobre una variable de entrada y cada nodo terminal una decisión. Estos pueden ser utilizados en problemas de regresión y clasificación, en nuestro caso la variable explicada es continua por lo que trabajamos con un árbol de regresión.  
+\subsection{Metodología}
+
+En esta sección presentamos las cuatro técnicas utilizadas que incluyen Modelos Lineales, métodos de ensamble de modelos, Bagging basado en Árboles de decisión y Redes Neuronales.
+
+Un modelo de regresión lineal múltiple (\ref{ecuacionML}) es un modelo lineal en los parámetros en el cual la variable de respuesta, $Y$, es determinada por un conjunto de variables independientes, las variables explicativas (matriz $X$). Se busca el hiperplano que mejor ajuste a los datos. Los parámetros $\beta_i$ para el modelo se obtienen por mínimos cuadrados.
+
+\begin{equation}
+y_{i}=\beta_{0}+\beta_{1} x_{i}+\beta_{2} x_{i}+\cdots+\beta_{d} x_{i}+\epsilon_{i}
+\label{ecuacionML}
+\end{equation}
+
+Los métodos de ensamble de modelos son útiles para mejorar el rendimiento de los modelos de aprendizaje automático al mejorar su precisión. Se construyen varios modelos y se combinan las predicciones resultantes mediante su promedio. Este promedio de errores produce mejores predicciones generalizando el carácter particular de cada uno de estos modelos.
+
+Un árbol de decisión es una división recursiva del espacio de variables explicativas en una estructura en forma de árbol, cada nodo interior contiene una pregunta sobre una variable de entrada y cada nodo terminal una decisión. Estos pueden ser utilizados en problemas de regresión y clasificación, en nuestro caso la variable explicada es continua por lo que trabajamos con árboles de regresión.  
 
 Los árboles CART (Classification And Regression Tree) se construyen dividiendo el conjunto de valores posibles de $X_1,X_2,...,X_p$ en $J$ regiones disjuntas $R_1, R_2,..., R_J$. En el caso de un árbol de regresión, para cada observación en la región $R_j$ se predice el valor medio de las respuestas.
 
@@ -100,38 +109,100 @@ Se divide el conjunto de datos en entrenamiento $L$ y testeo $T$, se toma una mu
 
 Bagging puede ser utilizado para Árboles de decisión, para esto se construyen $B$ árboles con conjunto de entrenamiento obtenido mediante una muestra bootstrap del conjunto de entrenamiento original, luego se hace un promedio de las predicciones resultantes. Estos árboles tienen varianza grande pero sesgo bajo ya que no se podan. Al promediarlos se reduce la varianza y por lo tanto se mejora la precisión de las predicciones.
 
-Las Redes Neuronales son un modelado matemático que homologa el comportamiento de una neurona biológica. El objetivo de su diseño es emular al cerebro humano. Básicamente   se basa en una red  de neuronas conectadas que reciben un estímulo de entrada y producen una salida.   
+Las Redes Neuronales son un modelado matemático que homologa el comportamiento de una neurona biológica. El objetivo de su diseño es emular al cerebro humano. Básicamente se basa en una red de neuronas conectadas que reciben un estímulo de entrada y producen una salida.   
 
 En su modelado matemático se construyen combinaciones lineales de las entradas y se obtiene la salida como una función no lineal de estas. 
 
-En la Ecuación (\ref{ecuacionRedes}) se muestra el modelado de una red neuronal con una capa de entrada, una capa oculta  y una salida. Donde $i$,$j$ son los índices correspondientes a la capa de entrada y oculta respectivamente, $w$ corresponde a los pesos de cada neurona y $f(.)$ a la función de activación.
+En la Ecuación (\ref{ecuacionRedes}) se muestra el modelado de una red neuronal con una capa de entrada, una capa oculta y una salida. Donde $i$, $j$ son los índices correspondientes a la capa de entrada y oculta respectivamente, $w$ corresponde a los pesos de cada neurona y $f(.)$ a la función de activación.
 
 \begin{equation}
 g_{k}(x)=f \underbrace{(\sum_{j=1}^{n_{H}} w_{k j} f \underbrace{\left(\sum_{i=1}^{d} w_{j i} x_{i}+w_{j 0}\right)}_{\text {net }_{j}}+w_{k 0})}_{\text {net }_{k}}
 \label{ecuacionRedes}
 \end{equation}
 
-En la Figura~\ref{redNeuronal} se muestra la arquitectura de una neurona simple. El procedimiento para encontrar los pesos que configuren el mejor modelo consiste en primero multiplicar cada dato de entrada por un peso y los valores ponderados se combinan linealmente. Posteriormente se aplica una función de activación no lineal. El valor de salida es comparado con el valor objetivo. La diferencia de error que se produce es utilizada para actualizar los pesos y se itera hasta obtener el criterio deseado de parada. Actualmente el algoritmo más utilizado para esto es el de Backpropagation.  Esta arquitectura crece en complejidad pero el algoritmo y los procesos son siempre los mismos. 
-
-\begin{figure}[!hbt]
-\centering
-\includegraphics[width=0.5\textwidth]{redNeuronal}
-\caption{Arquitectura donde se muestra una red neuronal simple, con una capa de entrada, una capa oculta y una capa de salida. Adoptado de Neurona, 2008 (https://poncos.wordpress.com/2008/03/
-17/introduccion-a-las-redes-neuronales/).}
-\label{redNeuronal}
-\end{figure}
-
-En el caso de Árboles de decisión y Bagging para encontrar el modelo con mejor  desempeño se construyó un algoritmo de fuerza bruta que evalúa secuencialmente una a una todas las posibles combinaciones de variables para generar un modelo de predicción. Este modelo se corrió en distintas combinaciones fijadas manualmente (por intento y error) de posibles grupos de variables, ya que el orden de todas las combinaciones es de $2^n - 1$ para $n$ opciones de variables. Y para $n>20$ el algoritmo se vuelve computacionalmente costoso.
+El procedimiento para encontrar los pesos que configuren el mejor modelo consiste en primero multiplicar cada dato de entrada por un peso y los valores ponderados se combinan linealmente. Posteriormente se aplica una función de activación no lineal. El valor de salida es comparado con el valor objetivo. La diferencia de error que se produce es utilizada para actualizar los pesos y se itera hasta obtener el criterio deseado de parada. Actualmente el algoritmo más utilizado para esto es el de Backpropagation. Esta arquitectura crece en complejidad pero el algoritmo y los procesos son siempre los mismos. 
 
 \begin{equation}
 (min)RMSE=\sqrt{\frac{1}{N} \sum_{i=1}^{N}\left(y_{i}-f_{i}\right)^{2}}
 \label{remseequation}
 \end{equation}
 
-Para evaluar el desempeño de los distintos modelos de predicción se utilizó la medida de error RMSE como se ve en la Ecuación (\ref{remseequation}) donde $y_i$ representa las predicciones y $f_i$ los valores reales. Se busca minimizar el RMSE.
+Para evaluar el rendimiento de los distintos modelos de predicción se utilizó la medida de error RMSE como se ve en la Ecuación (\ref{remseequation}) donde $y_i$ representa las predicciones y $f_i$ los valores reales. Se busca minimizar el RMSE.
+
+\subsection{Proceso}
+
+En primer lugar, el conjunto de datos se dividió aleatoriamente, en una muestra de entrenamiento del $70\%$ y una muestra de testeo del $30\%$ donde se busca generalizar el comportamiento del precio del Bitcoin en ambas muestras.
+
+El primer objetivo fue recrear la predicción del precio del Bitcoin mediante la estrategía de modelos lineales propuestas en la literatura e investigaciones anteriores. 
+
+En la Figura \ref{diagramLinearRegression} se muestra el diagrama del proceso. En este caso para encontrar el modelo con mejor rendimiento se construyó un algoritmo de fuerza bruta que evalúa secuencialmente una a una todas las posibles combinaciones de las variables seleccionadas (cinco primeros retrasos de $Close$ y $Volumen$ del precio del Bitcoin) comparando el RMSE generado por cada una de estas combinaciones con la muestra de testeo. El modelo seleccionado es aquel con el menor RMSE. El orden de todas las combinaciones es de $2^n - 1$ para $n$ opciones de variables. En este caso contamos con $1023$ posibles modelos.
 
 
-El conjunto de datos se dividió aleatoriamente, en una muestra de entrenamiento del $70\%$ y una muestra de testeo del $30\%$.
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=0.5\textwidth]{diagramLinearRegression}
+\caption{Diagrama del proceso de generación del modelo lineal con menor RMSE a partir de una selección de $1023$ posibles modelos creados desde las combinaciones obtenidas de los cinco primeros retrasos de $Close$ y $Volumen$ del precio del Bitcoin.}
+\label{diagramLinearRegression}
+\end{figure}
+
+En la búsqueda de nuevas propuestas de predicción, mediante la prueba y el error y otras sugerencias de la literatura existente, decidimos primariamente cambiar el enfoque de generación de muestras de entrenamiento y testeo estáticas hacia un enfoque dinámico mediante el concepto de ventanas móviles \cite{forecastinBitcoinClosing}. 
+
+El concepto de ventanas móviles consiste en que para predecir el precio del Bitcoin del momento $n$ se genera una ventana de entrenamiento con memoria de corto plazo de un ancho de $w$ rezagos de tiempo. Es decir, una ventana de $w$ rezagos para la predicción del momento $n$ iría desde el momento $n-1$ hasta el momento $n-w-1$. En esta investigación se utiliza una ventana móvil de 25 rezagos, esto es producto de diferentes pruebas y recomendaciones en la literatura. 
+
+El siguiente paso fue utilizar el concepto previamente descripto para modelos lineales pero en las ventanas móviles de corto plazo. Es decir, que para cada momento $n$ que se quiere predecir se generan $1023$ modelos lineales a partir de todas las combinaciones de las variables. En este punto surgieron descubrimientos importantes que dirigieron el rumbo de esta invesigación. 
+
+Una primer conclusión fue notar que la linealidad en cada una de las ventanas móviles era extremadamente fuerte ya que el RMSE obtenido con las mismas muestras de entrenamiento de cada ventana era considerablemente bajo y a medida que aumentabamos el $w$ de la ventana el RMSE aumentaba. Esto fue un indicio de que utilizar modelo lineales era una buena opción ya que la linealidad en el corto plazo era fuerte.
+
+Otro punto importante para el desarrollo de esta investigación fue el descubrimiento de que entre las $1023$ predicciones obtenidas por los modelos lineales en cada ventana en un  $76.15\%$ de los casos al menos uno de los modelos realizaba una estimación casi perfecta en un intervalo $\pm 5$ dólares. 
+
+En la Figura \ref{muestras} se puede observar como en una muestra aleatoria de cuatro momentos de la base, en las primeras tres muestras el precio de $Close$ es contemplado en al menos una de las $1023$ predicciones. En la muestra $4$ se observa como ninguna de estas estimaciones logra predecir con una exactitud de $\pm 5$ dólares este precio. Este comportamiento se mantiene durante toda la base.
+
+\begin{figure}[!htb]
+\centering
+\subfigure[Muestra 1.]
+{ \includegraphics[width=5.0cm]{muestra1}
+\label{pca_MORT}
+}\\
+\subfigure[Muestra 2.]
+{ \includegraphics[width=5.0cm]{muestra2}
+\label{pca_HUMID}
+}\hfill
+\subfigure[Muestra 3.]
+{ \includegraphics[width=5.0cm]{muestra3}
+\label{pca_NOX}
+}\hfill
+\subfigure[Muestra 4.]
+{ \includegraphics[width=5.0cm]{muestra4}
+\label{pca_HOUS}
+}
+\caption{Muestra de cuatro momentos de la base y las $1023$ predicciones del precio de $Close$ generadas a partir de una ventana de $25$ rezagos para cada momento por modelos lineales.}
+\label{muestras}
+\end{figure}
+%
+
+De aquí en adelante en esta investigación la estrategía a seguir es la de buscar posibles patrones entre los precios estimados por cada uno de los modelos y el precio real de $Close$ del Bitcoin. Por los ejemplo simplificando, ¿existe una relación cada vez que los primeros diez modelos predicen un precio muy cercano en sus predicciones y el precio real del $Close$? Los posibles patrones a encontrar entre estas posibles predicciones y el precio real son muchos, entonces nuestra pregunta fundamental a responder es ¿existe algún patrón entre las $1023$ predicciones y el precio real del Bitcoin?
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=0.5\textwidth]{diagramExpertMean}
+\caption{Diagrama.}
+\label{diagramLinearRegression}
+\end{figure}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=0.5\textwidth]{diagramBagging}
+\caption{Diagrama.}
+\label{diagramLinearRegression}
+\end{figure}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[width=0.5\textwidth]{diagramNeuralNetwork}
+\caption{Diagrama.}
+\label{diagramLinearRegression}
+\end{figure}
+
 
 
 \section{Resultados}
@@ -198,10 +269,8 @@ Para las Redes Neuronales se utilizó el paquete Keras~\cite{keras} de R~\cite{r
 \colorbox{lightgray}{%
 \begin{tabular}{|l|l|l|l|l|}
 \hline Capa de nodos 2 & Capa de nodos 3 & Capa de activación 2 & Capa de activación 3 & RMSE \\
-\hline 16& 8 & linear & relu  &  485.0457\\
-\hline 16& 8 & relu & relu  &  546.5264\\
-\hline 8& 8 & relu & relu  &  610.5063\\
-\hline 8& 8 & linear & relu  & 2657.04\\
+\hline 16 & 8 & relu & relu  &  136.8908\\
+\hline 8 & 8 & relu & relu  &  10640.92\\
 \hline
 \end{tabular}%
 }\endgroup
@@ -213,15 +282,16 @@ En el caso de Modelos Lineales las variables que se obtuvieron en el modelo fuer
 
 \begin{table}[!hbt]
 \centering
-\caption{Mejores resultados de RMSE obtenidos para las tres técnicas utilizadas en la predicción del $Cierre$ de Bitcoin. }
+\caption{Mejores resultados de RMSE obtenidos para las cuatro técnicas utilizadas en la predicción del $Cierre$ de Bitcoin. }
 \label{RMSEFinal}
 \begingroup\setlength{\fboxsep}{0pt}
 \colorbox{lightgray}{%
 \begin{tabular}{|l|l|}
 \hline Algoritmo de predicción & RMSE \\
-\hline Bagging (Árbol de decisión)& 454.5812\\
-\hline Redes Neuronales & 485.0457 \\
-\hline Árbol de decisión & 537.6748 \\
+\hline Modelos Lineales & 231.4537\\
+\hline Ensamble de modelos & 91.33031\\
+\hline Bagging (Árbol de decisión)& 78.87432\\
+\hline Redes Neuronales & 136.8908 \\
 \hline
 \end{tabular}%
 }\endgroup
@@ -286,8 +356,7 @@ http://dx.doi.org/10.1098/rsos.180538
 \bibitem{forecastinBitcoinClosing}
 Uras, N., Marchesi, L., Marchesi, M., Tonelli, R. (2020)
 {\em Forecasting Bitcoin closing price series using linear
-regression and neural networks models}. Department of Mathematics and Computer Science,
-University of Cagliari.
+regression and neural networks models}. Department of Mathematics and Computer Science, University of Cagliari.
 
 \bibitem{forecast_bitcoin_GAM}
 Asante Gyamerah, S. (2020).
@@ -389,6 +458,12 @@ Alcalde, V., Martinez Angerosa, P. (2020).
 {\em Predicción del precio diario de Cierre del
 Bitcoin mediante Bagging, Árboles de
 decisión y Redes Neuronales.}
+
+\bibitem{Goodfellow}
+Goodfellow, I., Bengio, Y., Courville, A. (2016). 
+{\em Deep Learning.} MIT Press. 
+http://www.deeplearningbook.org
+
 
 \end{thebibliography}
 \end{document}

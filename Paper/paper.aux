@@ -11,38 +11,62 @@
 \citation{forecastinBitcoinClosing}
 \babel@aux{spanish}{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introducción}{1}{}\protected@file@percent }
+\citation{forecastinBitcoinClosing}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Datos}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Descripción de los datos}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Preparación de los datos}{2}{}\protected@file@percent }
-\citation{forecastinBitcoinClosing}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Serie de tiempo del precio del Cierre del Bitcoin desde el día $22/1/2020$ hasta el $9/9/2020$.}}{3}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Serie de tiempo del precio del Cierre del Bitcoin desde el día $12/12/2019$ a las 08:00:00h hasta el $10/12/2020$ a la 01:00:00h.}}{3}{}\protected@file@percent }
 \newlabel{priceClose}{{1}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Los modelos}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Metodología}{3}{}\protected@file@percent }
+\newlabel{ecuacionML}{{1}{3}}
 \citation{libroCurso}
 \citation{libroCurso}
+\citation{forecastinBitcoinClosing}
+\newlabel{ecuacionRedes}{{2}{5}}
+\newlabel{remseequation}{{3}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Proceso}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Diagrama del proceso de generación del modelo lineal con menor RMSE a partir de una selección de $1023$ posibles modelos creados desde las combinaciones obtenidas de los cinco primeros retrasos de $Close$ y $Volumen$ del precio del Bitcoin.}}{5}{}\protected@file@percent }
+\newlabel{diagramLinearRegression}{{2}{5}}
 \citation{randomForest}
 \citation{r}
-\newlabel{ecuacionRedes}{{1}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Arquitectura donde se muestra una red neuronal simple, con una capa de entrada, una capa oculta y una capa de salida. Adoptado de Neurona, 2008 (https://poncos.wordpress.com/2008/03/ 17/introduccion-a-las-redes-neuronales/).}}{5}{}\protected@file@percent }
-\newlabel{redNeuronal}{{2}{5}}
-\newlabel{remseequation}{{2}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Resultados}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Resultados}{6}{}\protected@file@percent }
+\newlabel{pca_MORT}{{3(a)}{7}}
+\newlabel{sub@pca_MORT}{{(a)}{7}}
+\newlabel{pca_HUMID}{{3(b)}{7}}
+\newlabel{sub@pca_HUMID}{{(b)}{7}}
+\newlabel{pca_NOX}{{3(c)}{7}}
+\newlabel{sub@pca_NOX}{{(c)}{7}}
+\newlabel{pca_HOUS}{{3(d)}{7}}
+\newlabel{sub@pca_HOUS}{{(d)}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Muestra de cuatro momentos de la base y las $1023$ predicciones del precio de $Close$ generadas a partir de una ventana de $25$ rezagos para cada momento por modelos lineales.}}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Muestra 1.}}}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Muestra 2.}}}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Muestra 3.}}}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {Muestra 4.}}}{7}{}\protected@file@percent }
+\newlabel{muestras}{{3}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama.}}{7}{}\protected@file@percent }
+\newlabel{diagramLinearRegression}{{4}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama.}}{7}{}\protected@file@percent }
+\newlabel{diagramLinearRegression}{{5}{7}}
 \citation{forecastinBitcoinClosing}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Árbol de regresión correspondiente al precio de Cierre del Bitcoin.}}{6}{}\protected@file@percent }
-\newlabel{decisionTree}{{3}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama.}}{8}{}\protected@file@percent }
+\newlabel{diagramLinearRegression}{{6}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Árbol de regresión correspondiente al precio de Cierre del Bitcoin.}}{8}{}\protected@file@percent }
+\newlabel{decisionTree}{{7}{8}}
 \citation{keras}
 \citation{r}
 \citation{tensorflow}
 \citation{paper1}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A la izquierda se muestra la disminución media de la precisión en las predicciones en la muestra OOB cuando una variable determinada se excluye del modelo (IncMSE). A la derecha se muestra la disminución total en la impureza del nodo que resulta de las divisiones sobre esa variable, promediada en todos los árboles para regresión (IncNodePurity).}}{8}{}\protected@file@percent }
-\newlabel{baggingVariableImportancia}{{4}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusiones}{8}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Variables utilizadas para los mejores 10 modelos y su RMSE correspondiente para la predicción del precio de $Cierre$ de Bitcoin utilizando Bagging.}}{9}{}\protected@file@percent }
-\newlabel{baggingTop10}{{1}{9}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Combinaciones de banderas utilizadas en las Redes Neuronales y el RMSE obtenido para la predicción del $Cierre$ de Bitcoin. }}{9}{}\protected@file@percent }
-\newlabel{redesModelTuning}{{2}{9}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Mejores resultados de RMSE obtenidos para las tres técnicas utilizadas en la predicción del $Cierre$ de Bitcoin. }}{9}{}\protected@file@percent }
-\newlabel{RMSEFinal}{{3}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces A la izquierda se muestra la disminución media de la precisión en las predicciones en la muestra OOB cuando una variable determinada se excluye del modelo (IncMSE). A la derecha se muestra la disminución total en la impureza del nodo que resulta de las divisiones sobre esa variable, promediada en todos los árboles para regresión (IncNodePurity).}}{10}{}\protected@file@percent }
+\newlabel{baggingVariableImportancia}{{8}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusiones}{10}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Variables utilizadas para los mejores 10 modelos y su RMSE correspondiente para la predicción del precio de $Cierre$ de Bitcoin utilizando Bagging.}}{11}{}\protected@file@percent }
+\newlabel{baggingTop10}{{1}{11}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Combinaciones de banderas utilizadas en las Redes Neuronales y el RMSE obtenido para la predicción del $Cierre$ de Bitcoin. }}{11}{}\protected@file@percent }
+\newlabel{redesModelTuning}{{2}{11}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Mejores resultados de RMSE obtenidos para las cuatro técnicas utilizadas en la predicción del $Cierre$ de Bitcoin. }}{11}{}\protected@file@percent }
+\newlabel{RMSEFinal}{{3}{11}}
 \bibcite{Bitcoin_revolucion_monetaria}{1}
 \bibcite{regression_for_bitcoin_price}{2}
 \bibcite{Satoshi}{3}
@@ -71,4 +95,5 @@
 \bibcite{libroCurso2}{26}
 \bibcite{paper1}{27}
 \bibcite{paper2}{28}
-\gdef \@abspage@last{12}
+\bibcite{Goodfellow}{29}
+\gdef \@abspage@last{14}

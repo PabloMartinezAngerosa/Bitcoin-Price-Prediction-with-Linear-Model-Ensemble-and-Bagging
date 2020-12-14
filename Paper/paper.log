@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.6)  13 DEC 2020 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.6)  14 DEC 2020 01:51
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -77,27 +77,48 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \Gin@req@height=\dimen140
 \Gin@req@width=\dimen141
 )
-\c@dfn=\count188
+(C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen142
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen143
+\subfiglabelskip=\skip52
+\c@subfigure=\count188
+\c@lofdepth=\count189
+\c@subtable=\count190
+\c@lotdepth=\count191
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.cfg
+)
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+)
+\c@dfn=\count192
 
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen142
-\lightrulewidth=\dimen143
-\cmidrulewidth=\dimen144
-\belowrulesep=\dimen145
-\belowbottomsep=\dimen146
-\aboverulesep=\dimen147
-\abovetopsep=\dimen148
-\cmidrulesep=\dimen149
-\cmidrulekern=\dimen150
-\defaultaddspace=\dimen151
-\@cmidla=\count189
-\@cmidlb=\count190
-\@aboverulesep=\dimen152
-\@belowrulesep=\dimen153
-\@thisruleclass=\count191
-\@lastruleclass=\count192
-\@thisrulewidth=\dimen154
+\heavyrulewidth=\dimen144
+\lightrulewidth=\dimen145
+\cmidrulewidth=\dimen146
+\belowrulesep=\dimen147
+\belowbottomsep=\dimen148
+\aboverulesep=\dimen149
+\abovetopsep=\dimen150
+\cmidrulesep=\dimen151
+\cmidrulekern=\dimen152
+\defaultaddspace=\dimen153
+\@cmidla=\count193
+\@cmidlb=\count194
+\@aboverulesep=\dimen154
+\@belowrulesep=\dimen155
+\@thisruleclass=\count195
+\@lastruleclass=\count196
+\@thisrulewidth=\dimen156
 )
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -122,7 +143,7 @@ Package: expl3 2020-12-03 L3 programming layer (loader)
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count193
+\l__kernel_color_stack_int=\count197
 \l__pdf_internal_box=\box47
 ))
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
@@ -139,16 +160,16 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen155
+\ex@=\dimen157
 ))
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen156
+\col@sep=\dimen158
 \ar@mcellbox=\box48
-\extrarowheight=\dimen157
+\extrarowheight=\dimen159
 \NC@list=\toks18
-\extratabsurround=\skip49
-\backup@length=\skip50
+\extratabsurround=\skip55
+\backup@length=\skip56
 \ar@cellbox=\box49
 )
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
@@ -156,45 +177,45 @@ eys2e.sty
 Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box50
-\l__siunitx_tmp_dim=\dimen158
-\l__siunitx_tmp_int=\count194
-\l__siunitx_number_mantissa_length_int=\count195
-\l__siunitx_number_uncert_length_int=\count196
-\l__siunitx_round_int=\count197
-\l__siunitx_process_decimal_int=\count198
-\l__siunitx_process_uncertainty_int=\count199
-\l__siunitx_process_fixed_int=\count266
-\l__siunitx_process_integer_min_int=\count267
-\l__siunitx_process_precision_int=\count268
-\l__siunitx_group_min_int=\count269
+\l__siunitx_tmp_dim=\dimen160
+\l__siunitx_tmp_int=\count198
+\l__siunitx_number_mantissa_length_int=\count199
+\l__siunitx_number_uncert_length_int=\count266
+\l__siunitx_round_int=\count267
+\l__siunitx_process_decimal_int=\count268
+\l__siunitx_process_uncertainty_int=\count269
+\l__siunitx_process_fixed_int=\count270
+\l__siunitx_process_integer_min_int=\count271
+\l__siunitx_process_precision_int=\count272
+\l__siunitx_group_min_int=\count273
 \l__siunitx_angle_marker_box=\box51
 \l__siunitx_angle_unit_box=\box52
-\l__siunitx_angle_marker_dim=\dimen159
-\l__siunitx_angle_unit_dim=\dimen160
-\l__siunitx_unit_int=\count270
-\l__siunitx_unit_denominator_int=\count271
-\l__siunitx_unit_numerator_int=\count272
-\l__siunitx_unit_prefix_int=\count273
-\l__siunitx_unit_prefix_base_int=\count274
-\l__siunitx_unit_prefix_gram_int=\count275
-\l__siunitx_number_product_int=\count276
-\c__siunitx_one_fill_skip=\skip51
-\l__siunitx_table_unit_align_skip=\skip52
-\l__siunitx_table_exponent_dim=\dimen161
-\l__siunitx_table_integer_dim=\dimen162
-\l__siunitx_table_mantissa_dim=\dimen163
-\l__siunitx_table_marker_dim=\dimen164
-\l__siunitx_table_result_dim=\dimen165
-\l__siunitx_table_uncert_dim=\dimen166
-\l__siunitx_table_fill_pre_dim=\dimen167
-\l__siunitx_table_fill_post_dim=\dimen168
-\l__siunitx_table_fill_mid_dim=\dimen169
+\l__siunitx_angle_marker_dim=\dimen161
+\l__siunitx_angle_unit_dim=\dimen162
+\l__siunitx_unit_int=\count274
+\l__siunitx_unit_denominator_int=\count275
+\l__siunitx_unit_numerator_int=\count276
+\l__siunitx_unit_prefix_int=\count277
+\l__siunitx_unit_prefix_base_int=\count278
+\l__siunitx_unit_prefix_gram_int=\count279
+\l__siunitx_number_product_int=\count280
+\c__siunitx_one_fill_skip=\skip57
+\l__siunitx_table_unit_align_skip=\skip58
+\l__siunitx_table_exponent_dim=\dimen163
+\l__siunitx_table_integer_dim=\dimen164
+\l__siunitx_table_mantissa_dim=\dimen165
+\l__siunitx_table_marker_dim=\dimen166
+\l__siunitx_table_result_dim=\dimen167
+\l__siunitx_table_uncert_dim=\dimen168
+\l__siunitx_table_fill_pre_dim=\dimen169
+\l__siunitx_table_fill_post_dim=\dimen170
+\l__siunitx_table_fill_mid_dim=\dimen171
 \l__siunitx_table_pre_box=\box53
 \l__siunitx_table_post_box=\box54
 \l__siunitx_table_mantissa_box=\box55
 \l__siunitx_table_result_box=\box56
-\l__siunitx_table_number_align_skip=\skip53
-\l__siunitx_table_text_align_skip=\skip54
+\l__siunitx_table_number_align_skip=\skip59
+\l__siunitx_table_text_align_skip=\skip60
 
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator.s
 ty
@@ -202,57 +223,66 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip55
+\@mathmargin=\skip61
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen170
+\pmbraise@=\dimen172
 )
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count277
+\inf@bad=\count281
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count278
-\leftroot@=\count279
+\uproot@=\count282
+\leftroot@=\count283
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count280
-\DOTSCASE@=\count281
+\classnum@=\count284
+\DOTSCASE@=\count285
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box57
 \strutbox@=\box58
-\big@size=\dimen171
+\big@size=\dimen173
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count282
-\c@MaxMatrixCols=\count283
+\macc@depth=\count286
+\c@MaxMatrixCols=\count287
 \dotsspace@=\muskip16
-\c@parentequation=\count284
-\dspbrk@lvl=\count285
+\c@parentequation=\count288
+\dspbrk@lvl=\count289
 \tag@help=\toks19
-\row@=\count286
-\column@=\count287
-\maxfields@=\count288
+\row@=\count290
+\column@=\count291
+\maxfields@=\count292
 \andhelp@=\toks20
-\eqnshift@=\dimen172
-\alignsep@=\dimen173
-\tagshift@=\dimen174
-\tagwidth@=\dimen175
-\totwidth@=\dimen176
-\lineht@=\dimen177
+\eqnshift@=\dimen174
+\alignsep@=\dimen175
+\tagshift@=\dimen176
+\tagwidth@=\dimen177
+\totwidth@=\dimen178
+\lineht@=\dimen179
 \@envbody=\toks21
-\multlinegap=\skip56
-\multlinetaggap=\skip57
+\multlinegap=\skip62
+\multlinetaggap=\skip63
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
 (paper.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+
+
+LaTeX Warning: Label `diagramLinearRegression' multiply defined.
+
+
+LaTeX Warning: Label `diagramLinearRegression' multiply defined.
+
+
+LaTeX Warning: Label `diagramLinearRegression' multiply defined.
 
 
 LaTeX Warning: Label `bitcoin_socialmedia' multiply defined.
@@ -260,36 +290,36 @@ LaTeX Warning: Label `bitcoin_socialmedia' multiply defined.
 )
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Info: Redefining \. on input line 16.
-LaTeX Info: Redefining \% on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Info: Redefining \. on input line 17.
+LaTeX Info: Redefining \% on input line 17.
 
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count289
-\scratchdimen=\dimen178
+\scratchcounter=\count293
+\scratchdimen=\dimen180
 \scratchbox=\box59
-\nofMPsegments=\count290
-\nofMParguments=\count291
+\nofMPsegments=\count294
+\nofMParguments=\count295
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count292
-\MPscratchDim=\dimen179
-\MPnumerator=\count293
-\makeMPintoPDFobject=\count294
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen181
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
 \everyMPtoPDFconversion=\toks24
 )
 (C:\Users\nessa\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -350,125 +380,172 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<priceCloseBitcoin.png, id=8, 1128.01425pt x 387.849pt>
-File: priceCloseBitcoin.png Graphic file (type png)
-<use priceCloseBitcoin.png>
-Package pdftex.def Info: priceCloseBitcoin.png  used on input line 62.
-(pdftex.def)             Requested size: 452.0pt x 155.40907pt.
- [2] [3 <./priceCloseBitcoin.png>]
-Underfull \hbox (badness 1221) in paragraph at lines 85--86
+<serie.png, id=8, 877.77937pt x 436.63126pt>
+File: serie.png Graphic file (type png)
+<use serie.png>
+Package pdftex.def Info: serie.png  used on input line 62.
+(pdftex.def)             Requested size: 452.0pt x 224.83762pt.
+
+Underfull \hbox (badness 1024) in paragraph at lines 74--75
+\OT1/cmr/m/n/12 par-tir de in-ves-ti-ga-cio-nes y la li-te-ra-tu-
+ []
+
+[2] [3 <./serie.png>]
+Underfull \hbox (badness 1221) in paragraph at lines 94--95
 \OT1/cmr/m/n/12 do el con-jun-to de va-lo-res po-si-bles de
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 85--86
+Underfull \hbox (badness 2680) in paragraph at lines 94--95
 \OML/cmm/m/it/12 X[]; X[]; :::; X[]$ \OT1/cmr/m/n/12 en $\OML/cmm/m/it/12 J$ \O
 T1/cmr/m/n/12 re-gio-nes dis-jun-tas
  []
 
-
-Overfull \hbox (16.3652pt too wide) detected at line 112
+[4]
+Overfull \hbox (16.3652pt too wide) detected at line 121
 \OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 f []
  []
 
+<diagramLinearRegression.png, id=27, 422.7795pt x 257.763pt>
+File: diagramLinearRegression.png Graphic file (type png)
+<use diagramLinearRegression.png>
+Package pdftex.def Info: diagramLinearRegression.png  used on input line 143.
+(pdftex.def)             Requested size: 226.0pt x 137.78975pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
 
- [4]
-<redNeuronal.png, id=28, 392.96812pt x 153.57375pt>
-File: redNeuronal.png Graphic file (type png)
-<use redNeuronal.png>
-Package pdftex.def Info: redNeuronal.png  used on input line 118.
-(pdftex.def)             Requested size: 226.0pt x 88.32295pt.
+[5 <./diagramLinearRegression.png>]
+<muestra1.png, id=33, 528.47438pt x 225.84375pt>
+File: muestra1.png Graphic file (type png)
+<use muestra1.png>
+Package pdftex.def Info: muestra1.png  used on input line 165.
+(pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
+<muestra2.png, id=34, 528.47438pt x 225.84375pt>
+File: muestra2.png Graphic file (type png)
+<use muestra2.png>
+Package pdftex.def Info: muestra2.png  used on input line 169.
+(pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
+<muestra3.png, id=35, 528.47438pt x 225.84375pt>
+File: muestra3.png Graphic file (type png)
+<use muestra3.png>
+Package pdftex.def Info: muestra3.png  used on input line 173.
+(pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
+<muestra4.png, id=36, 528.47438pt x 225.84375pt>
+File: muestra4.png Graphic file (type png)
+<use muestra4.png>
+Package pdftex.def Info: muestra4.png  used on input line 177.
+(pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
+<diagramExpertMean.png, id=37, 422.7795pt x 316.7835pt>
+File: diagramExpertMean.png Graphic file (type png)
+<use diagramExpertMean.png>
+Package pdftex.def Info: diagramExpertMean.png  used on input line 187.
+(pdftex.def)             Requested size: 226.0pt x 169.33972pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 118--120
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 187--188
+ [][] 
+ []
+
+<diagramBagging.png, id=38, 422.7795pt x 316.7835pt>
+File: diagramBagging.png Graphic file (type png)
+<use diagramBagging.png>
+Package pdftex.def Info: diagramBagging.png  used on input line 194.
+(pdftex.def)             Requested size: 226.0pt x 169.33972pt.
+
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 194--195
+ [][] 
+ []
+
+<diagramNeuralNetwork.png, id=39, 422.7795pt x 316.7835pt>
+File: diagramNeuralNetwork.png Graphic file (type png)
+<use diagramNeuralNetwork.png>
+Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 201.
+(pdftex.def)             Requested size: 226.0pt x 169.33972pt.
+
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 201--202
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-\OT1/cmr/m/n/12 (https://poncos.wordpress.com/2008/03/
- []
-
-
-Underfull \hbox (badness 6236) in paragraph at lines 141--142
+Underfull \hbox (badness 6236) in paragraph at lines 212--213
 \OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 1$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n
 /12 2$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 3$, $\OML/cmm/m/it/12 volLag\OT
 1/cmr/m/n/12 4$,
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 141--142
+Underfull \hbox (badness 4193) in paragraph at lines 212--213
 \OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 5$ (cin-co pri-me-ros re-tra-sos del
  []
 
-[5 <./redNeuronal.png>]
-<diagramNeuralNetwork.png, id=33, 704.6325pt x 527.9725pt>
+[6] [7 <./muestra1.png> <./muestra2.png> <./muestra3.png> <./muestra4.png> <./d
+iagramExpertMean.png> <./diagramBagging.png>]
 File: diagramNeuralNetwork.png Graphic file (type png)
 <use diagramNeuralNetwork.png>
-Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 150.
-(pdftex.def)             Requested size: 226.0pt x 169.33328pt.
+Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 221.
+(pdftex.def)             Requested size: 226.0pt x 169.33972pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 150--151
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 221--222
  [][] 
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 155--156
+Underfull \hbox (badness 4316) in paragraph at lines 226--227
 []\OT1/cmr/m/n/12 En el ca-so de Bag-ging el mo-de-
  []
 
 
-Underfull \hbox (badness 6741) in paragraph at lines 155--156
+Underfull \hbox (badness 6741) in paragraph at lines 226--227
 \OT1/cmr/m/n/12 lo que lo-gra un me-nor RM-SE de
  []
 
-[6 <./diagramNeuralNetwork.png>]
-<baggingVariableImportancia.png, id=38, 686.565pt x 592.46344pt>
+[8 <./diagramNeuralNetwork.png>]
+<baggingVariableImportancia.png, id=57, 686.565pt x 592.46344pt>
 File: baggingVariableImportancia.png Graphic file (type png)
 <use baggingVariableImportancia.png>
-Package pdftex.def Info: baggingVariableImportancia.png  used on input line 160
+Package pdftex.def Info: baggingVariableImportancia.png  used on input line 231
 .
 (pdftex.def)             Requested size: 316.39862pt x 273.02466pt.
 
-Overfull \hbox (41.35945pt too wide) in paragraph at lines 207--208
+Overfull \hbox (41.35945pt too wide) in paragraph at lines 276--277
  [][][][][][][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
-[8 <./baggingVariableImportancia.png>] [9
+ [9]
+[10 <./baggingVariableImportancia.png>] [11
 
 ]
-Underfull \hbox (badness 1721) in paragraph at lines 280--285
+Underfull \hbox (badness 1721) in paragraph at lines 350--355
 []\OT1/cmr/m/n/12 Wheatley, S., Sor-net-te, D., Hu-ber, T., Rep-pen, M., Gant-n
 er, RN. (2019).
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 293--298
+Underfull \hbox (badness 1253) in paragraph at lines 362--367
 \OT1/cmr/m/n/12 Afri-can Uni-ver-sity, Ins-ti-tu-te for Ba-sic Scien-ces, Tech-
 no-logy, and In-no-va-tion.
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 305--309
+Underfull \hbox (badness 4279) in paragraph at lines 374--378
 []\OT1/cmr/m/n/12 Kristoufek, L. (2015). \OT1/cmr/m/it/12 What Are the Main Dri
 -vers of the Bit-coin Pri-
  []
 
-[10
+[12
 
 ]
-Underfull \hbox (badness 6445) in paragraph at lines 369--372
+Underfull \hbox (badness 6445) in paragraph at lines 438--441
 []\OT1/cmr/m/n/12 Allaire, JJ., Tang, Y. (2020). \OT1/cmr/m/it/12 ten-sor-flow:
  R In-ter-fa-ce to 'Ten-sor-Flow'.
  []
 
-[11] [12] (paper.aux
+[13] [14] (paper.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -477,10 +554,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6504 strings out of 479697
- 128122 string characters out of 2867133
- 422970 words of memory out of 3000000
- 23520 multiletter control sequences out of 15000+200000
+ 6721 strings out of 479697
+ 131386 string characters out of 2867133
+ 423677 words of memory out of 3000000
+ 23731 multiletter control sequences out of 15000+200000
  413594 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,16n,76p,1323b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -498,9 +575,9 @@ Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb><C:/Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmti12.pfb>
-Output written on paper.pdf (12 pages, 322859 bytes).
+Output written on paper.pdf (14 pages, 331841 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
