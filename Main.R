@@ -6,7 +6,7 @@ base::source("LinearModelGeneralFit.R")
 # Se genera para la base con 70% train y 30% test
 # Ajustes con Modelos Lineales.
 linearModelGeneralFit <- GetLinearModelGeneralFit(datapriceTrain, datapriceTest)
-# RMSE 235.2711 linearModelFited = lm(close ~ closeLag1 +  closeLag3 + volLag2 + volLag3, data=databaseTrain)
+# RMSE 231.4537 linearModelFited = lm(close ~ closeLag1 + closeLag3, data=databaseTrain)
 bestRMSELinearModel   <- linearModelGeneralFit$RMSE[base::which.min(linearModelGeneralFit$RMSE)]
 
 
