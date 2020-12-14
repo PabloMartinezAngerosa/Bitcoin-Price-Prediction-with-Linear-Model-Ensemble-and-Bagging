@@ -5,15 +5,10 @@ base::source("LinearModelGeneralFit.R")
 
 # Se genera para la base con 70% train y 30% test
 # Ajustes con Modelos Lineales.
-linearModelGeneralFit <- GetLinearModelGeneralFit(datapriceTrain, datapriceTrain)
+linearModelGeneralFit <- GetLinearModelGeneralFit(datapriceTrain, datapriceTest)
 # RMSE 235.2711 linearModelFited = lm(close ~ closeLag1 +  closeLag3 + volLag2 + volLag3, data=databaseTrain)
 bestRMSELinearModel   <- linearModelGeneralFit$RMSE[base::which.min(linearModelGeneralFit$RMSE)]
 
-linearModelFited = lm(close ~ closeLag1 +  closeLag3 + volLag2 + volLag3, data = datapriceTrain)
-predDataprice <- stats::predict(linearModelFited, datapriceTest, interval = "prediction")
-# RMSE con la muestra de testeo 231.4834
-linearModelRMSEDataprice <- base::sqrt(base::sum((predDataprice -
-                             datapriceTest$close )^2)/base::length(datapriceTest$close))
 
 # Buscamos el porcentaje de aciertos de los combo de estimadores
 # Carga base datos generada con 2^n predicciones por frame
