@@ -1,0 +1,35 @@
+./Main.R - Archivo principal donde se ejecutan los codigos principales 
+	para entender el paper.
+
+./BaggingDecisionTree.R - Entrena un modelo de Bagging por Árboles de Regresión para
+			la base de datos por ventanas de 25 lags para los momentos 
+			de la base original. Este algoritmo puede demorar. 
+
+./modelTuning.R - Automatiza el entrenamiento de los modelos de Redes Neuronales para
+		la base de datos por ventanas de 25 lags para los momentos 
+		de la base original. Este algoritmo demora varias horas. 
+		Se pueden leer los resultados sin ejecutar.
+
+------------------------------------------------------------------------------------
+Los siguientes archivos no es necesario ejecutarlos para entender el paper.
+
+./DatabaseManager.R - Carga las dos bases de datos necesarias.
+
+./DatabaseFrameComboEstimatorsLinearModels.R - Genera la base de datos por
+						ventanas de 25 lags para los momentos 
+						de la base original. Este archivo no
+						es necesario ejecutarlo, puede demorar
+						mucho tiempo.
+
+./ComboEstimatorsLinearModels.R	- Crea todas las combinaciones de modelos lineales,
+				RMSE, predicciones (opcional) para una muestra 
+				de entrenamiento y testeo dada.
+
+./LinearModelGeneralFit.R - Crea el mejor modelo para Modelos Lineales de la base 
+			original.
+
+./modelBlueprint.R - Red para la base de datos por ventanas de 25 lags para los momentos 
+		de la base original.
+
+./binanceAPI.py - Se conecta a la API de Binance y descarga los datos.
+
