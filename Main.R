@@ -2,16 +2,15 @@ base::library(magrittr)
 base::source("DatabaseManager.R")
 base::source("LinearModelGeneralFit.R")
 
-
 # Se genera para la base con 70% train y 30% test
 # Ajustes con Modelos Lineales.
 linearModelGeneralFit <- GetLinearModelGeneralFit(datapriceTrain, datapriceTest)
+
 # RMSE 231.4537 linearModelFited = lm(close ~ closeLag1 + closeLag3, data=databaseTrain)
 bestRMSELinearModel   <- linearModelGeneralFit$RMSE[base::which.min(linearModelGeneralFit$RMSE)]
 
-
-# Buscamos el porcentaje de aciertos de los combo de estimadores
-# Carga base datos generada con 2^n predicciones por frame
+# Buscamos el porcentaje de aciertos del ensamble de estimadores
+# Carga base datos generada con (2^n)-1 predicciones por frame
 # Esta base fue generada con DatabaseFrameComboEstimatorsLinearModels.R
 totalEstimadoresEnBandas <- 0
 cota <- 5
@@ -30,13 +29,13 @@ for (i in base::c(1:rowData)) {
   }
 }
 
-# Porcentaje de estimadores por frame que entre 2^n predicciones al menos 1 se encuentra
-# entre las cotas
+# Porcentaje de estimadores por frame que entre (2^n)-1 predicciones al 
+# menos 1 se encuentra entre las cotas
 # cota = 5 -> 76.15005%
 totalEstimadoresEnBandas/rowData
 
-# Realizamos histogramas basado en la cantidad de aciertos para cada experto en una
-# cota +-5 . 
+# Realizamos histogramas basados en la cantidad de aciertos para cada experto 
+# en una cota +-5
 aciertosExpertos = base::rep(0,colData)
 cota <- 5
 colData <- base::ncol(databaseFrameCombEstimators)-1
@@ -55,7 +54,7 @@ for (i in base::c(1:rowData)) {
 base::plot(aciertosExpertos, type = "h", xlim=c(1,1023), xlab="Modelos", ylab="Cantidad de aciertos")
 
 # Gráfico de acierto de los modelos y las variables más importante segun Bagging
-base::plot(aciertosExpertos, type = "l", xlim=c(1,1023), xlab="Modelos", ylab="Cantidad de aciertos")
+base::plot(aciertosExpertos, type = "l", xlim=c(1,1023), xlab="Modelos",  ylab="Cantidad de aciertos")
 abline(v=c(728,16,512,714,704,673,110,513,596,804,777,907))
 
 # Promedio de acierto de umbrales absolutos y relativos
@@ -66,10 +65,12 @@ base::mean(aciertosExpertos[251:550]) #713.1167
 base::mean(aciertosExpertos[551:1023]) #887.797
 (base::mean(aciertosExpertos[551:1023])/rowData)*100 #10.18466%
 
+# Maximo y minimo de aciertos
 base::max(aciertosExpertos)  #1061
 (base::max(aciertosExpertos)/rowData)*100  #12.17162%
 base::min(aciertosExpertos)  #351
 (base::min(aciertosExpertos)/rowData)*100 #4.026615%
+
 # Calcula RMSE de la media experta de opiniones como estimador 91.33031
 acumMeanComboEstimadores <- 0
 colData <- base::ncol(databaseFrameCombEstimatorsTest)-1
@@ -90,10 +91,15 @@ RMSEMeanComboEstimadores <- base::sqrt(
                             )
 RMSEMeanComboEstimadores
 
+# Graficos de una muestra aleatoria de 4 momentos del tiempo de las 1023 
+# predicciones del precio y linea vertical con el precio de close real
 base::set.seed(134)
 colData <- base::ncol(databaseFrameCombEstimators)-1
 closeIndex <- base::ncol(databaseFrameCombEstimators)
+
+# Se obtiene la muestra para los graficos
 muestra <- sample(1:base::nrow(databaseFrameCombEstimators), size = 4)
+
 muestra1 <- as.vector(t(databaseFrameCombEstimators[muestra[1], 1:colData]))
 close1 <- databaseFrameCombEstimators[muestra[1], closeIndex]
 plot(muestra1, seq(from = 1, to = 1, length.out = length(muestra1)), 

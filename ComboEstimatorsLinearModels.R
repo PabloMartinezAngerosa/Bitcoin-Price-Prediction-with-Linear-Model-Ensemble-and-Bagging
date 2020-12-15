@@ -1,9 +1,9 @@
-# Este algoritmo devuelve las 2^n - 1  modelos lineales #
+# Este algoritmo devuelve las (2^n) - 1  modelos lineales 
 # de todas las combinaciones posibles de un conjunto de variables
 # para una Base de entrenamiento dada.
 # Por default devuelve el RMSE de cada uno de los modelos generados
 # utilizando datasetTest recibido como parametro.
-# Si se marca getPricePrediction = True, retorna el precio estimado para
+# Si se marca getPricePrediction = TRUE, retorna el precio estimado para
 # cada modelo generado. 
 GetComboEstimatorsLinearModels <- function(databaseTrain, databaseTest, getPircePrediction=FALSE) {
   
@@ -23,8 +23,6 @@ GetComboEstimatorsLinearModels <- function(databaseTrain, databaseTest, getPirce
     var10 = 0:1
   )
   
-  # El grupo de variables para buscar todas las posibles combinaciones  
-  # surge de la prueba y el error, y la literatura existente. 
   .variablesLag <- base::c(
     "closeLag1",
     "closeLag2",

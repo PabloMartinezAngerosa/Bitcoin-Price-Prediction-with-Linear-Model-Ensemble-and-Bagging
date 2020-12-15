@@ -1,3 +1,4 @@
+# Atencion ejecutar este algoritmo demora un tiempo considerable^2
 base::library(magrittr)
 base::library(keras)
 base::library(tfdatasets)

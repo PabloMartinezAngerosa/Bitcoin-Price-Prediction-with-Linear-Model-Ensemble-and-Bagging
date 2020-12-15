@@ -1,5 +1,5 @@
 base::library(magrittr)
-# Bitcoin precio por hora  desde 2019-12-10 23:00:00 hasta 2020-12-10 01:00:00 #
+# Bitcoin precio por hora desde el $12/12/2019$ a las 08:00:00h hasta el $10/12/2020$ a la 01:00:00h.
 .btcPrice <-  utils::read.csv("BTCUSDT-1h.csv")
 
 # Se toma los "precios del close" en el momento n.
@@ -25,6 +25,9 @@ databaseCoins <- base::data.frame(
   "volLag6"    = .btcPrice$volume[7:(.limite +5)]
 )
 
+# Cargamos la base de datos de ensamble de estimadores generadas previamente en
+# DatabaseFrameComboEstimatorsLinearModels.R
+# Atención generar esta base lleva mucho tiempo, recomendamos leerla directamente
 databaseFrameCombEstimators <-  utils::read.csv("frameCombEstimators.csv")
 dummyIndex <- data.frame("index" = base::c(1:base::nrow(databaseFrameCombEstimators)))
 databaseFrameCombEstimators <- cbind(dummyIndex, databaseFrameCombEstimators)
@@ -41,7 +44,7 @@ databaseCoins <- base::cbind(dummyIndex, databaseCoins)
 
 databaseCoins <- databaseCoins[databaseFrameCombEstimators$index,]
 
-# Seleccionamos aleatoriamente 70% para train y 30% para test. #
+# Seleccionamos aleatoriamente 70% para train y 30% para test. 
 # cortamos la base para que tenga las mismas predicciones que la
 # base con las ventanas moviles.
 base::set.seed(1234)

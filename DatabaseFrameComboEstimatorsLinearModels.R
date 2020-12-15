@@ -1,7 +1,9 @@
 # Este archivo se llama una sola vez para crear el CSV #
-# Genera base de datos con cada uno de las 2^n - 1 estimaciones
-# generado por cada modelo correspondiente de toda la base en un frame dado.
+# Genera base de datos con cada uno de las (2^n) - 1 estimaciones
+# generado por cada modelo correspondiente de toda la base en una ventana dada.
 # Realiza una base de entrenamiento y de muestra con los mismos indices que la general.
+# Atención ejecutar este algoritmo demora mucho tiempo, se puede cargar la base directamente
+# desde el archivo DatabaseManager.R
 base::source("DatabaseManager.R")
 base::source("ComboEstimatorsLinearModels.R")
 
@@ -33,7 +35,7 @@ for (i in c(0:(inicio-1))) {
   
 }
 
-# Creamos .csv con la base por frame
+# Creamos .csv con la base por ventana
 utils::write.csv(databaseFrame,"frameCombEstimators.csv", row.names = FALSE)
 
 

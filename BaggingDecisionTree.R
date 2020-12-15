@@ -1,3 +1,4 @@
+# Atencion ejecutar este algoritmo demora un tiempo considerable
 base::source("DatabaseManager.R")
 
 base::set.seed(1L)
