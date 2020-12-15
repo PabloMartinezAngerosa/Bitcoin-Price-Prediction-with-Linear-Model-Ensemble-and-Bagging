@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.6)  14 DEC 2020 01:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.6)  14 DEC 2020 21:55
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -276,15 +276,6 @@ LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 
 
-LaTeX Warning: Label `diagramLinearRegression' multiply defined.
-
-
-LaTeX Warning: Label `diagramLinearRegression' multiply defined.
-
-
-LaTeX Warning: Label `diagramLinearRegression' multiply defined.
-
-
 LaTeX Warning: Label `bitcoin_socialmedia' multiply defined.
 
 )
@@ -371,7 +362,7 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 asic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-Underfull \vbox (badness 1264) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -380,29 +371,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<serie.png, id=8, 877.77937pt x 436.63126pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<serie.png, id=7, 877.77937pt x 436.63126pt>
 File: serie.png Graphic file (type png)
 <use serie.png>
-Package pdftex.def Info: serie.png  used on input line 62.
+Package pdftex.def Info: serie.png  used on input line 63.
 (pdftex.def)             Requested size: 452.0pt x 224.83762pt.
-
-Underfull \hbox (badness 1024) in paragraph at lines 74--75
+ [2]
+Underfull \hbox (badness 1024) in paragraph at lines 75--76
 \OT1/cmr/m/n/12 par-tir de in-ves-ti-ga-cio-nes y la li-te-ra-tu-
  []
 
-[2] [3 <./serie.png>]
-Underfull \hbox (badness 1221) in paragraph at lines 94--95
+[3 <./serie.png>]
+Underfull \hbox (badness 1221) in paragraph at lines 95--96
 \OT1/cmr/m/n/12 do el con-jun-to de va-lo-res po-si-bles de
  []
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 94--95
+Underfull \hbox (badness 2680) in paragraph at lines 95--96
 \OML/cmm/m/it/12 X[]; X[]; :::; X[]$ \OT1/cmr/m/n/12 en $\OML/cmm/m/it/12 J$ \O
 T1/cmr/m/n/12 re-gio-nes dis-jun-tas
  []
 
-[4]
-Overfull \hbox (16.3652pt too wide) detected at line 121
+
+Underfull \vbox (badness 2951) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (16.3652pt too wide) detected at line 125
 \OML/cmm/m/it/12 g[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML
 /cmm/m/it/12 f []
  []
@@ -410,142 +406,368 @@ Overfull \hbox (16.3652pt too wide) detected at line 121
 <diagramLinearRegression.png, id=27, 422.7795pt x 257.763pt>
 File: diagramLinearRegression.png Graphic file (type png)
 <use diagramLinearRegression.png>
-Package pdftex.def Info: diagramLinearRegression.png  used on input line 143.
+Package pdftex.def Info: diagramLinearRegression.png  used on input line 147.
 (pdftex.def)             Requested size: 226.0pt x 137.78975pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 143--144
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 147--148
  [][] 
  []
 
-[5 <./diagramLinearRegression.png>]
-<muestra1.png, id=33, 528.47438pt x 225.84375pt>
+[5]
+<muestra1.png, id=32, 528.47438pt x 225.84375pt>
 File: muestra1.png Graphic file (type png)
 <use muestra1.png>
-Package pdftex.def Info: muestra1.png  used on input line 165.
+Package pdftex.def Info: muestra1.png  used on input line 169.
 (pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
-<muestra2.png, id=34, 528.47438pt x 225.84375pt>
+<muestra2.png, id=33, 528.47438pt x 225.84375pt>
 File: muestra2.png Graphic file (type png)
 <use muestra2.png>
-Package pdftex.def Info: muestra2.png  used on input line 169.
+Package pdftex.def Info: muestra2.png  used on input line 173.
 (pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
-<muestra3.png, id=35, 528.47438pt x 225.84375pt>
+<muestra3.png, id=34, 528.47438pt x 225.84375pt>
 File: muestra3.png Graphic file (type png)
 <use muestra3.png>
-Package pdftex.def Info: muestra3.png  used on input line 173.
+Package pdftex.def Info: muestra3.png  used on input line 177.
 (pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
-<muestra4.png, id=36, 528.47438pt x 225.84375pt>
+<muestra4.png, id=35, 528.47438pt x 225.84375pt>
 File: muestra4.png Graphic file (type png)
 <use muestra4.png>
-Package pdftex.def Info: muestra4.png  used on input line 177.
+Package pdftex.def Info: muestra4.png  used on input line 181.
 (pdftex.def)             Requested size: 142.26378pt x 60.79597pt.
-<diagramExpertMean.png, id=37, 422.7795pt x 316.7835pt>
+ [6 <./diagramLinearRegression.png>] [7 <./muestra1.png> <./muestra2.png> <./mu
+estra3.png> <./muestra4.png>]
+<histograma.png, id=48, 528.47438pt x 296.60812pt>
+File: histograma.png Graphic file (type png)
+<use histograma.png>
+Package pdftex.def Info: histograma.png  used on input line 195.
+(pdftex.def)             Requested size: 226.0pt x 126.84201pt.
+
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 195--196
+ [][] 
+ []
+
+<diagramExpertMean.png, id=49, 422.7795pt x 316.7835pt>
 File: diagramExpertMean.png Graphic file (type png)
 <use diagramExpertMean.png>
-Package pdftex.def Info: diagramExpertMean.png  used on input line 187.
+Package pdftex.def Info: diagramExpertMean.png  used on input line 208.
 (pdftex.def)             Requested size: 226.0pt x 169.33972pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 187--188
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 208--209
  [][] 
  []
 
-<diagramBagging.png, id=38, 422.7795pt x 316.7835pt>
+[8 <./histograma.png>]
+<diagramBagging.png, id=54, 422.7795pt x 316.7835pt>
 File: diagramBagging.png Graphic file (type png)
 <use diagramBagging.png>
-Package pdftex.def Info: diagramBagging.png  used on input line 194.
+Package pdftex.def Info: diagramBagging.png  used on input line 219.
 (pdftex.def)             Requested size: 226.0pt x 169.33972pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 194--195
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 219--220
  [][] 
  []
 
-<diagramNeuralNetwork.png, id=39, 422.7795pt x 316.7835pt>
+<diagramNeuralNetwork.png, id=55, 422.7795pt x 316.7835pt>
 File: diagramNeuralNetwork.png Graphic file (type png)
 <use diagramNeuralNetwork.png>
-Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 201.
+Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 228.
 (pdftex.def)             Requested size: 226.0pt x 169.33972pt.
 
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 201--202
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 228--229
  [][] 
- []
-
-
-Underfull \hbox (badness 6236) in paragraph at lines 212--213
-\OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 1$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n
-/12 2$, $\OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 3$, $\OML/cmm/m/it/12 volLag\OT
-1/cmr/m/n/12 4$,
- []
-
-
-Underfull \hbox (badness 4193) in paragraph at lines 212--213
-\OML/cmm/m/it/12 volLag\OT1/cmr/m/n/12 5$ (cin-co pri-me-ros re-tra-sos del
- []
-
-[6] [7 <./muestra1.png> <./muestra2.png> <./muestra3.png> <./muestra4.png> <./d
-iagramExpertMean.png> <./diagramBagging.png>]
-File: diagramNeuralNetwork.png Graphic file (type png)
-<use diagramNeuralNetwork.png>
-Package pdftex.def Info: diagramNeuralNetwork.png  used on input line 221.
-(pdftex.def)             Requested size: 226.0pt x 169.33972pt.
-
-Overfull \hbox (11.38115pt too wide) in paragraph at lines 221--222
- [][] 
- []
-
-
-Underfull \hbox (badness 4316) in paragraph at lines 226--227
-[]\OT1/cmr/m/n/12 En el ca-so de Bag-ging el mo-de-
- []
-
-
-Underfull \hbox (badness 6741) in paragraph at lines 226--227
-\OT1/cmr/m/n/12 lo que lo-gra un me-nor RM-SE de
- []
-
-[8 <./diagramNeuralNetwork.png>]
-<baggingVariableImportancia.png, id=57, 686.565pt x 592.46344pt>
-File: baggingVariableImportancia.png Graphic file (type png)
-<use baggingVariableImportancia.png>
-Package pdftex.def Info: baggingVariableImportancia.png  used on input line 231
-.
-(pdftex.def)             Requested size: 316.39862pt x 273.02466pt.
-
-Overfull \hbox (41.35945pt too wide) in paragraph at lines 276--277
- [][][][][][][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-[10 <./baggingVariableImportancia.png>] [11
+ [9 <./diagramExpertMean.png> <./diagramBagging.png>]
+<aciertoBagging.png, id=61, 528.47438pt x 296.60812pt>
+File: aciertoBagging.png Graphic file (type png)
+<use aciertoBagging.png>
+Package pdftex.def Info: aciertoBagging.png  used on input line 247.
+(pdftex.def)             Requested size: 226.0pt x 126.84201pt.
 
-]
-Underfull \hbox (badness 1721) in paragraph at lines 350--355
-[]\OT1/cmr/m/n/12 Wheatley, S., Sor-net-te, D., Hu-ber, T., Rep-pen, M., Gant-n
-er, RN. (2019).
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 247--248
+ [][] 
+ []
+
+[10 <./diagramNeuralNetwork.png> <./aciertoBagging.png>]
+<errorMSEBagging.png, id=67, 514.92375pt x 246.32025pt>
+File: errorMSEBagging.png Graphic file (type png)
+<use errorMSEBagging.png>
+Package pdftex.def Info: errorMSEBagging.png  used on input line 256.
+(pdftex.def)             Requested size: 226.0pt x 108.10686pt.
+
+Overfull \hbox (11.38115pt too wide) in paragraph at lines 256--257
+ [][] 
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 362--367
-\OT1/cmr/m/n/12 Afri-can Uni-ver-sity, Ins-ti-tu-te for Ba-sic Scien-ces, Tech-
-no-logy, and In-no-va-tion.
+Overfull \hbox (7.05579pt too wide) in paragraph at lines 283--284
+ [][][][][][][] 
+ []
+
+[11 <./errorMSEBagging.png>]
+Overfull \hbox (1.57364pt too wide) in paragraph at lines 302--303
+ [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 374--378
-[]\OT1/cmr/m/n/12 Kristoufek, L. (2015). \OT1/cmr/m/it/12 What Are the Main Dri
--vers of the Bit-coin Pri-
+Underfull \hbox (badness 1281) in paragraph at lines 326--330
+\OT1/cmr/m/n/12 Sam-su-din, Ai-da Mus-tapha, Na-zim
  []
 
-[12
 
-]
-Underfull \hbox (badness 6445) in paragraph at lines 438--441
-[]\OT1/cmr/m/n/12 Allaire, JJ., Tang, Y. (2020). \OT1/cmr/m/it/12 ten-sor-flow:
- R In-ter-fa-ce to 'Ten-sor-Flow'.
+Underfull \hbox (badness 3138) in paragraph at lines 332--334
+[]\OT1/cmr/m/n/12 Nakamoto, S. (2008). \OT1/cmr/m/it/12 Bit-coin: A
  []
 
-[13] [14] (paper.aux
+
+Underfull \hbox (badness 7012) in paragraph at lines 340--344
+[]\OT1/cmr/m/n/12 Karame, G., Huth, M., Vishik,
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 340--344
+\OT1/cmr/m/n/12 C. (2020). \OT1/cmr/m/it/12 An over-view of block-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--344
+\OT1/cmr/m/it/12 chain scien-ce and en-gi-nee-ring.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--344
+\OT1/cmr/m/n/12 R. Soc. Open Sci. 7: 200168.
+ []
+
+
+Overfull \hbox (6.1483pt too wide) in paragraph at lines 340--344
+\OT1/cmr/m/n/12 http://dx.doi.org/10.1098/rsos.200168 
+ []
+
+[12]
+Underfull \hbox (badness 1648) in paragraph at lines 354--356
+[]\OT1/cmr/m/n/12 Ferdiansyah, Si-ti Ha-jar Oth-manb,
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 354--356
+\OT1/cmr/m/it/12 Stock Mar-ket Pre-dic-tion: Methods,
+ []
+
+
+Underfull \hbox (badness 5260) in paragraph at lines 358--363
+[]\OT1/cmr/m/n/12 Wheatley, S., Sor-net-te, D., Hu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--363
+\OT1/cmr/m/n/12 ber, T., Rep-pen, M., Gant-ner,
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 358--363
+\OT1/cmr/m/n/12 RN. (2019). \OT1/cmr/m/it/12 Are Bit-coin bub-bles
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--363
+\OT1/cmr/m/it/12 pre-dic-ta-ble? Com-bi-ning a ge-ne-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--363
+\OT1/cmr/m/it/12 ra-li-zed Met-cal-fe's Law and the
+ []
+
+
+Overfull \hbox (6.1483pt too wide) in paragraph at lines 358--363
+\OT1/cmr/m/n/12 http://dx.doi.org/10.1098/rsos.180538 
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 370--375
+[]\OT1/cmr/m/n/12 Asante Gya-me-rah, S. (2020). \OT1/cmr/m/it/12 On
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
+\OT1/cmr/m/it/12 fo-re-cas-ting the in-tra-day Bit-coin
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
+\OT1/cmr/m/it/12 pri-ce using en-sem-ble of va-ria-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
+\OT1/cmr/m/it/12 tio-nal mo-de de-com-po-si-tion and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
+\OT1/cmr/m/it/12 ge-ne-ra-li-zed ad-di-ti-ve mo-del\OT1/cmr/m/n/12 . Pan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
+\OT1/cmr/m/n/12 Afri-can Uni-ver-sity, Ins-ti-tu-te for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
+\OT1/cmr/m/n/12 Ba-sic Scien-ces, Tech-no-logy, and
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 382--386
+\OT1/cmr/m/it/12 Main Dri-vers of the Bit-coin Pri-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
+[]\OT1/cmr/m/n/12 Burnie, A., Yil-maz, E. (2019).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
+\OT1/cmr/m/it/12 So-cial me-dia and bit-coin me-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
+\OT1/cmr/m/it/12 trics: which words mat-ter.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--397
+\OT1/cmr/m/n/12 R. Soc. open sci. 6: 191068.
+ []
+
+
+Overfull \hbox (6.1483pt too wide) in paragraph at lines 393--397
+\OT1/cmr/m/n/12 http://dx.doi.org/10.1098/rsos.191068 
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 399--402
+[]\OT1/cmr/m/n/12 Garcia, D., Sch-weitzer, F. (2015).
+ []
+
+
+Overfull \hbox (6.1483pt too wide) in paragraph at lines 399--402
+\OT1/cmr/m/n/12 http://dx.doi.org/10.1098/rsos.150288 
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 409--413
+[]\OT1/cmr/m/n/12 Hakim, R. (2020) \OT1/cmr/m/it/12 Bit-coin pri-cing:
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 409--413
+\OT1/cmr/m/it/12 im-pact of at-trac-ti-ve-ness va-ria-bles.
+ []
+
+
+Underfull \hbox (badness 2735) in paragraph at lines 409--413
+\OT1/cmr/m/n/12 Sao Pau-lo School Of Eco-no-mics.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
+\OT1/cmr/m/n/12 https://doi.org/10.1186/s40854-020-
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 415--419
+\OT1/cmr/m/n/12 Foun-da-tion for Sta-tis-ti-cal Com-pu-
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
+[]\OT1/cmr/m/n/12 Ripley, B. (2019). \OT1/cmr/m/it/12 tree:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
+\OT1/cmr/m/it/12 Clas-si-fi-ca-tion and Re-gres-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
+\OT1/cmr/m/it/12 sion Trees. \OT1/cmr/m/n/12 https://CRAN.R-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--429
+[]\OT1/cmr/m/n/12 Liaw, A., Wie-ner, M. (2002).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--429
+\OT1/cmr/m/it/12 Clas-si-fi-ca-tion and Re-gres-sion by
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--429
+\OT1/cmr/m/it/12 ran-dom-Fo-rest. \OT1/cmr/m/n/12 https://CRAN.R-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--434
+[]\OT1/cmr/m/n/12 Allaire, JJ., Cho-llet, F.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--434
+\OT1/cmr/m/n/12 (2020). \OT1/cmr/m/it/12 ke-ras: R In-ter-fa-ce
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--434
+\OT1/cmr/m/it/12 to 'Ke-ras'. \OT1/cmr/m/n/12 https://CRAN.R-
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 436--439
+[]\OT1/cmr/m/n/12 Allaire, JJ., Tang, Y., Ushey, K.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--444
+[]\OT1/cmr/m/n/12 Allaire, JJ. (2018). \OT1/cmr/m/it/12 tfruns:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--444
+\OT1/cmr/m/it/12 Trai-ning Run Tools for 'Ten-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--444
+\OT1/cmr/m/it/12 sor-Flow'. \OT1/cmr/m/n/12 https://CRAN.R-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--449
+[]\OT1/cmr/m/n/12 Allaire, JJ., Tang, Y. (2020).
+ []
+
+
+Underfull \hbox (badness 5133) in paragraph at lines 446--449
+\OT1/cmr/m/it/12 ten-sor-flow: R In-ter-fa-ce to 'Ten-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--449
+\OT1/cmr/m/it/12 sor-Flow'. \OT1/cmr/m/n/12 https://CRAN.R-
+ []
+
+[14] (paper.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -554,13 +776,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6721 strings out of 479697
- 131386 string characters out of 2867133
- 423677 words of memory out of 3000000
- 23731 multiletter control sequences out of 15000+200000
+ 6739 strings out of 479697
+ 131631 string characters out of 2867133
+ 418768 words of memory out of 3000000
+ 23749 multiletter control sequences out of 15000+200000
  413594 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,16n,76p,1323b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,16n,76p,1164b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmex10.pfb><C:/Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -575,9 +797,9 @@ Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb><C:/Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb><C:/Users/nessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmti12.pfb>
-Output written on paper.pdf (14 pages, 331841 bytes).
+Output written on paper.pdf (14 pages, 354154 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -25,7 +25,7 @@ baggingDecisionTreeFrameCombo[["mse"]]
 graphics::hist(baggingDecisionTreeFrameCombo[["mse"]])
 
 # Error disminuye a medida que aumenta la cantidad de arboles
-randomForest:::plot.randomForest(baggingDecisionTreeFrameCombo)
+randomForest:::plot.randomForest(baggingDecisionTreeFrameCombo, main="")
 
 # Error de test
 yhatBaggingDecisionTreeFrameCombo <- stats::predict(baggingDecisionTreeFrameCombo, 

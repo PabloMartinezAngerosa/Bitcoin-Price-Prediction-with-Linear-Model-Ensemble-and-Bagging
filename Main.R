@@ -38,6 +38,10 @@ totalEstimadoresEnBandas/rowData
 # Realizamos histogramas basado en la cantidad de aciertos para cada experto en una
 # cota +-5 . 
 aciertosExpertos = base::rep(0,colData)
+cota <- 5
+colData <- base::ncol(databaseFrameCombEstimators)-1
+closeIndex <- base::ncol(databaseFrameCombEstimators)
+rowData <- base::nrow(databaseFrameCombEstimators)
 
 for (i in base::c(1:rowData)) {
   close <-  databaseFrameCombEstimators[i,closeIndex]
@@ -48,10 +52,24 @@ for (i in base::c(1:rowData)) {
     }
   }
 }
-graphics::hist(aciertosExpertos)
-max(aciertosExpertos)  #1061
-min(aciertosExpertos)  #351
+base::plot(aciertosExpertos, type = "h", xlim=c(1,1023), xlab="Modelos", ylab="Cantidad de aciertos")
 
+# Gráfico de acierto de los modelos y las variables más importante segun Bagging
+base::plot(aciertosExpertos, type = "l", xlim=c(1,1023), xlab="Modelos", ylab="Cantidad de aciertos")
+abline(v=c(728,16,512,714,704,673,110,513,596,804,777,907))
+
+# Promedio de acierto de umbrales absolutos y relativos
+base::mean(aciertosExpertos[1:250]) #545.904
+(base::mean(aciertosExpertos[1:250])/rowData)*100 #6.262522%
+base::mean(aciertosExpertos[251:550]) #713.1167
+(base::mean(aciertosExpertos[251:550])/rowData)*100 #8.180758%
+base::mean(aciertosExpertos[551:1023]) #887.797
+(base::mean(aciertosExpertos[551:1023])/rowData)*100 #10.18466%
+
+base::max(aciertosExpertos)  #1061
+(base::max(aciertosExpertos)/rowData)*100  #12.17162%
+base::min(aciertosExpertos)  #351
+(base::min(aciertosExpertos)/rowData)*100 #4.026615%
 # Calcula RMSE de la media experta de opiniones como estimador 91.33031
 acumMeanComboEstimadores <- 0
 colData <- base::ncol(databaseFrameCombEstimatorsTest)-1
