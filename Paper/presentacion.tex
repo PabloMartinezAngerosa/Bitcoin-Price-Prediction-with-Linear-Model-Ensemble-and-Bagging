@@ -305,7 +305,7 @@ Diagrama del proceso de selección del Modelo Lineal con menor RMSE con respecto
 \item
 Buscando nuevas alternativas de predicción se introduce el concepto de ventanas móviles.
 \item 
-Generan un enfoque dinamico de muestras de entrenamiento y testeo.
+Generan un enfoque dinámico de muestras de entrenamiento y testeo.
 \item 
 Para predecir el precio en el momento $n$ se genera una ventana de $w$ rezagos desde el momento $n-1$ hasta el momento $n-w-1$ (ancho de $w$). 
 \item
@@ -374,7 +374,7 @@ Histograma de frecuencia absoluta de aciertos de los $1023$ modelos en toda la b
 \item
 Intervalo de acierto es de $\pm 5$ dólares.
 \item
-Umbral mínimo que logran todos los modelos de $351$ ($4.03\%$) aciertos. 
+Umbral mínimo que logran todos los modelos es de $351$ ($4.03\%$) aciertos. 
 \item
 Primer umbral tiene un promedio de acierto de $545.904$ ($6.26\%$).
 \item
@@ -406,7 +406,7 @@ Se considera el ensamble de estimaciones ($1023$) por Modelos Lineales como un c
 
 % Frame 12
 \begin{frame}[t]
-\frametitle{Proceso}
+\frametitle{Proceso - Opiniones expertas}
 \vfill
 Un primer criterio para sintetizar estas opiniones es el algoritmo de Ensamble de Modelos, donde se promedian las opiniones buscando mediar las  más extremas y lograr un consenso. 
 \vfill
@@ -418,7 +418,7 @@ Un primer criterio para sintetizar estas opiniones es el algoritmo de Ensamble d
 
 % Frame 12
 \begin{frame}[t]
-\frametitle{Proceso}
+\frametitle{Proceso - Ensamble de Modelos}
 \vfill
 Para cada momento $n$ a predecir de la muestra de testeo se realiza una ventana de $25$ rezagos, se obtienen las $1023$ predicciones para el precio del momento $n$ (opiniones expertas) y se promedian para obtener el precio estimado.
 \vfill
@@ -428,11 +428,11 @@ Para cada momento $n$ a predecir de la muestra de testeo se realiza una ventana 
 
 % Frame 12
 \begin{frame}[t]
-\frametitle{Proceso}
+\frametitle{Proceso - Bagging}
 \vfill
 \begin{itemize}
 \item
-El segundo criterio fue utilizar Bagging con Árboles de Regresión
+El segundo criterio fue utilizar Bagging con Árboles de Regresión.
 \item
 Se ajusta exactamente con la misma muestra de entrenamiento con la que se realizó la primera estimación por Modelos Lineales. 
 \item
@@ -445,13 +445,13 @@ Con el modelo ajustado, se predice cada una de las muestras de testeo y se calcu
 
 % Frame 12
 \begin{frame}[t]
-\frametitle{Proceso}
+\frametitle{Proceso - Redes Neuronales}
 \vfill
 \begin{itemize}
 \item
 El tercer criterio fue aplicar Redes Neuronales. 
 \item
-Primero se entrena una red donde sus variables de entrada son el ensamble de $1023$ opiniones de expertos generados por una ventana de $25$ rezagos para cada momento $n$ de la muestra de entrenamiento original
+Primero se entrena una red donde sus variables de entrada son el ensamble de $1023$ opiniones de expertos generados por una ventana de $25$ rezagos para cada momento $n$ de la muestra de entrenamiento original.
 \item
 Se calcula el RMSE con el modelo obtenido sobre la muestra de testeo. 
 \end{itemize}
