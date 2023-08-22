@@ -1,6 +1,6 @@
 # Bitcoin Price Prediction with Linear Model Ensemble and Bagging
 
-![Bitcoin Logo](https://github.com/PabloMartinezAngerosa/Bitcoin-Price-Prediction-with-Linear-Model-Ensemble-and-Bagging/blob/main/Paper/paper.pdf)
+
 
 ## Overview
 
@@ -18,7 +18,11 @@ This repository contains R code showcasing the application of ensemble technique
 
 For an in-depth understanding of the investigation's approach to Bitcoin price prediction through ensemble techniques, please refer to the original research:
 
-[Author(s). "Title of the Original Research."](link_to_original_research)
+[Vanessa Alcalde, Pablo Martinez Angerosa. "Predicci´on del precio del Bitcoin mediante
+ventanas m´oviles y un ensamble de
+estimadores por Modelos Lineales
+modelados a trav´es de Bagging con Arboles ´
+de Regresi´on"](https://github.com/PabloMartinezAngerosa/Bitcoin-Price-Prediction-with-Linear-Model-Ensemble-and-Bagging/blob/main/Paper/paper.pdf)
 
 ## License
 
